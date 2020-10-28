@@ -1,0 +1,183 @@
+<div class="page-container">
+
+    <h1>Dashboard</h1>
+    <tn-grid-container>
+           <div tnGridCell gcColSpan="2" gcRowSpan="3" class="card card-body">
+            <h1>Alert</h1>
+            <tn-alert
+                [type]="AlertType.PRIMARY"
+                [visible]="true"
+                [message]="'Primary alert'"
+                [iconClass]="'fas fa-comment'"
+                [dismissible]="true"
+            > 
+            </tn-alert>
+
+            <tn-alert
+                [type]="AlertType.SECONDARY"
+                [visible]="true"
+                [message]="'Secondary alert'"
+                [iconClass]="'fas fa-comment'"
+                [dismissible]="true">
+          </tn-alert>
+
+          <tn-alert
+            [type]="AlertType.SUCCESS"
+            [visible]="true"
+            [message]="'Success alert'"
+            [iconClass]="'fas fa-check-circle'"
+            [dismissible]="true">
+          </tn-alert>
+
+          <tn-alert
+            [type]="AlertType.INFO"
+            [visible]="true"
+            [message]="'Info alert'"
+            [iconClass]="'fas fa-info-circle'"
+            [dismissible]="true">
+          </tn-alert>
+
+          <tn-alert
+            [type]="AlertType.WARNING"
+            [visible]="true"
+            [message]="'Warning alert'"
+            [iconClass]="'fas fa-radiation'"
+            [dismissible]="true">
+          </tn-alert>
+
+            <tn-alert
+                [type]="AlertType.DANGER"
+                [visible]="true"
+                [message]="'Danger alert'"
+                [iconClass]="'fas fa-exclamation-circle'"
+                [dismissible]="true">
+            </tn-alert>
+
+
+           </div> 
+           
+           <div tnGridCell gcColSpan="2" gcRowSpan="3" class="card card-body">
+            <h2>Progress Bar</h2>
+            <div class="dashboard-content">
+              <div>
+              <button role="button" class="btn btn-primary" (click)="loadData()" [disabled]="isUpdating">Click To Update</button>
+              </div>
+              <div>
+                <tn-alert 
+                  [(visible)]="alertVisible"
+                  [type]="alertType"
+                  [message]="alertMessage"
+                  [dismissible]="alertDismissible"
+                  [iconClass]="alertIconClass">
+                </tn-alert>
+              </div>
+            </div>
+          </div>  
+          
+          <div tnGridCell gcColSpan="2" gcRowSpan="3" class="card card-body">
+            <h2>Toast Messages</h2>
+            <div class="dashboard-content">
+              <div>
+                <button 
+                    role="button" 
+                    class="btn btn-success" 
+                    (click)="sendToast('This is an success toast', ToastType.SUCCESS)">
+                  Success
+                </button>
+                <button 
+                    role="button" 
+                    class="btn btn-info" 
+                    (click)="sendToast('This is an info toast', ToastType.INFO)">
+                  Info
+                </button>
+                <button 
+                    role="button" 
+                    class="btn btn-warning" 
+                    (click)="sendToast('This is an warning toast', ToastType.WARNING)">
+                  Warning
+                </button>
+                <button 
+                    role="button" 
+                    class="btn btn-danger" 
+                    (click)="sendToast('This is an danger toast', ToastType.DANGER)">
+                  Danger
+                </button>
+              </div>
+              <div>
+                <button 
+                    role="button" 
+                    class="btn btn-primary" 
+                    (click)="sendToast('This is an primary toast', ToastType.PRIMARY)">
+                  Primary
+                </button>
+                <button 
+                    role="button" 
+                    class="btn btn-secondary" 
+                    (click)="sendToast('This is an secondary toast', ToastType.SECONDARY)">
+                  Secondary
+                </button>
+              </div>
+            </div>
+            <tn-toaster [position]="tosterPosition"></tn-toaster>
+          </div>
+        
+        <div tnGridCell gcColSpan="2" gcRowSpan="3" class="card card-body">
+            <h4>Multi Row & Col</h4>
+            <div style="margin-top: 1rem;">
+              <h3>Reactive Forms</h3>
+              <h6>(Primary, Medium, Rounded)</h6>
+              <form [formGroup]="form" novalidate>
+                <div>
+                  <tn-toggle-switch  
+                    [color]="ToggleSwitchColor.PRIMARY"
+                    [shape]="ToggleSwitchShape.ROUNDED"
+                    [size]="ToggleSwitchSize.MEDIUM"
+                    [disabled]="false"
+                    formControlName="isActive">
+                  </tn-toggle-switch>
+                </div>
+                <div style="margin-top: 0.8rem;">Form Value: <pre>{{ form.value | json }}</pre></div>
+              </form>
+            </div>
+            
+            <div style="margin-top: 1rem;">
+              <h3>Template Driven Forms</h3>
+              <h6>(Secondary, Small, Pilled)</h6>
+              <form #toggleForm="ngForm" novalidate>
+                <div>
+                  <tn-toggle-switch 
+                    name="isActive" 
+                    [color]="ToggleSwitchColor.SECONDARY"
+                    [shape]="ToggleSwitchShape.PILLED"
+                    [size]="ToggleSwitchSize.SMALL"
+                    [disabled]="false"
+                    [ngModel]="true">
+                  </tn-toggle-switch>
+                </div>
+                <div style="margin-top: 0.8rem;">Form Value: <pre>{{ toggleForm.form.value | json }}</pre></div>
+              </form>
+            </div>
+          </div>
+          <div tnGridCell class="card card-body">
+            <h4>Single Row & Col</h4>
+          </div>
+          <div tnGridCell class="card card-body">
+            <h4>Single Row & Col</h4>
+          </div>
+          <div tnGridCell class="card card-body">
+            <h4>Single Row & Col</h4>
+          </div>
+          <div tnGridCell class="card card-body">
+            <h4>Single Row & Col</h4>
+          </div>
+          <div tnGridCell gcColSpan="2" class="card card-body">
+            <h4>Two Cols</h4>
+          </div>
+          <div tnGridCell class="card card-body">
+            <h4>Single Row & Col</h4>
+          </div>
+          <div tnGridCell class="card card-body">
+            <h4>Single Row & Col</h4>
+          </div>
+    </tn-grid-container>
+</div>  

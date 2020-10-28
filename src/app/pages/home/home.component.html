@@ -1,0 +1,222 @@
+<tn-overlay-loader 
+  [overlayStyle]="overlayStyle" 
+  [spinnerSize]="spinnerSize" [isLoading]="isLoading">
+  <tn-overlay-side-panel></tn-overlay-side-panel>
+  <div style="padding: 1.5rem;">
+    <h1>Home</h1>
+    <div style="margin-top: 1rem;" class="btn btn-primary" (click)="show()">Show More</div>
+  </div>  
+
+
+  <div class="page-container">
+
+    <tn-grid-container>
+      <div tnGridCell gcColSpan="2" gcRowSpan="3" class="margin-0 padding-0">
+        <tn-card [type]="CardType.DEFAULT">
+          <tn-card-header>
+            <h3 class="margin-0">Default Card</h3>
+          </tn-card-header>
+          <tn-card-body>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div tnButton 
+  [shape]="ButtonShape.SQUARED">Squared</div>
+
+<div tnButton 
+  [shape]="ButtonShape.ROUNDED"
+  [color]="ButtonColor.SUCCESS">Rounded</div>
+
+<div tnButton 
+  [shape]="ButtonShape.PILLED"
+  [color]="ButtonColor.INFO">Pilled</div>
+
+
+<h2 style="margin-top: 2rem;">Colors</h2>
+
+<div tnButton
+  [color]="ButtonColor.DEFAULT">Default</div>
+
+<div tnButton
+  [color]="ButtonColor.PRIMARY">Primary</div>
+
+<div tnButton
+  [color]="ButtonColor.SECONDARY">Secondary</div>
+
+<div tnButton
+  [color]="ButtonColor.SUCCESS">Success</div>
+
+<div tnButton
+  [color]="ButtonColor.INFO">Info</div>
+
+<div tnButton
+  [color]="ButtonColor.WARNING">Warning</div>
+
+<div tnButton
+  [color]="ButtonColor.DANGER">Danger</div>
+
+
+<h2 style="margin-top: 2rem;">Styles</h2>
+
+<div tnButton
+  [color]="ButtonColor.INFO"
+  [style]="ButtonStyle.SOLID">Solid</div>
+
+<div tnButton
+  [color]="ButtonColor.INFO"
+  [style]="ButtonStyle.OUTLINED"
+  [size]="ButtonSize.MEDIUM">Outlined</div>
+
+
+
+<h2 style="margin-top: 2rem;">Sizes</h2>
+
+<div tnButton
+  [size]="ButtonSize.LARGE">Large</div>
+
+<div tnButton
+  [color]="ButtonColor.SUCCESS"
+  [size]="ButtonSize.MEDIUM">Medium</div>
+
+<div tnButton
+  [color]="ButtonColor.INFO"
+  [size]="ButtonSize.SMALL">Small</div>
+          </tn-card-body>
+        </tn-card>
+      </div>
+      <div tnGridCell class="card card-body">
+        <tn-card [type]="CardType.PRIMARY">
+          <tn-card-header>
+            <h3 class="margin-0">Primary Card</h3>
+          </tn-card-header>
+          <tn-card-body>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </tn-card-body>
+        </tn-card>
+      </div>
+      <div tnGridCell class="card card-body">
+        <tn-flip-card [flipAxis]="FlipAxis.Y">
+          <tn-front-card>
+            <tn-card [type]="CardType.SECONDARY">
+              <tn-card-header>
+                <h3 class="margin-0">Secondary Front Card</h3>
+              </tn-card-header>
+              <tn-card-body>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </tn-card-body>
+            </tn-card>
+          </tn-front-card>
+          <tn-back-card>
+            <tn-card [type]="CardType.BLANK">
+              <tn-card-header>
+                <h3 class="margin-0">Blank Back Card</h3>
+              </tn-card-header>
+              <tn-card-body>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </tn-card-body>
+            </tn-card>
+          </tn-back-card>
+        </tn-flip-card>
+      </div>
+      <div tnGridCell class="card card-body">
+        <tn-flip-card [flipAxis]="FlipAxis.X">
+          <tn-front-card>
+            <tn-card [type]="CardType.SUCCESS">
+              <tn-card-header>
+                <h3 class="margin-0">Success Front Card</h3>
+              </tn-card-header>
+              <tn-card-body>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </tn-card-body>
+            </tn-card>
+          </tn-front-card>
+          <tn-back-card>
+            <tn-card [type]="CardType.DANGER">
+              <tn-card-header>
+                <h3 class="margin-0">Danger Back Card</h3>
+              </tn-card-header>
+              <tn-card-body>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </tn-card-body>
+            </tn-card>
+          </tn-back-card>
+        </tn-flip-card>
+      </div>
+      <div tnGridCell class="card card-body">
+        <tn-card [type]="CardType.INFO">
+          <tn-card-header>
+            <h3 class="margin-0">Info Card</h3>
+          </tn-card-header>
+          <tn-card-body>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </tn-card-body>
+        </tn-card>
+      </div>
+      <div tnGridCell gcColSpan="2" class="card card-body">
+        <tn-flip-card>
+          <tn-front-card>
+            <tn-card [type]="CardType.WARNING">
+              <tn-card-header>
+                <h3 class="margin-0">Warning Front Card</h3>
+              </tn-card-header>
+              <tn-card-body>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              </tn-card-body>
+            </tn-card>
+          </tn-front-card>
+          <tn-back-card>
+            <tn-card [type]="CardType.DEFAULT">
+              <tn-card-header>
+                <h3 class="margin-0">Default Back Card</h3>
+              </tn-card-header>
+              <tn-card-body>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              </tn-card-body>
+            </tn-card>
+          </tn-back-card>
+        </tn-flip-card>
+      </div>
+      <div tnGridCell class="card card-body">
+        <tn-flip-card>
+          <tn-front-card>
+            <tn-card [type]="CardType.DANGER">
+              <tn-card-header>
+                <h3 class="margin-0">Danger Front Card</h3>
+              </tn-card-header>
+              <tn-card-body>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </tn-card-body>
+            </tn-card>
+          </tn-front-card>
+          <tn-back-card>
+            <tn-card [type]="CardType.SECONDARY">
+              <tn-card-header>
+                <h3 class="margin-0">Secondary Back Card</h3>
+              </tn-card-header>
+              <tn-card-body>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </tn-card-body>
+            </tn-card>
+          </tn-back-card>
+        </tn-flip-card>
+      </div>
+      <div tnGridCell class="card card-body">
+        <tn-card [type]="CardType.BLANK">
+          <tn-card-header>
+            <h3 class="margin-0">Blank Card</h3>
+          </tn-card-header>
+          <tn-card-body>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </tn-card-body>
+        </tn-card>
+      </div>
+    </tn-grid-container>
+  </div> 
+
+
+
+
+
+
+
+</tn-overlay-loader>
+
+

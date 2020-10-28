@@ -1,1 +1,117 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css");
+
+@import './projects/lib/src/lib/components/_shared/scss/variables';
+
+$background: #F6F6F8;
+$font-color: #FFFF;
+
+html, body, ul, p, h1, h2, h3, h4, h5, h6, blockquote {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: $background;
+}
+
+a {
+  color: $font-color;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.page-container {
+  margin: 1.5rem 1.5rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+ h2 {
+   margin-bottom: 1.25rem;
+ }
+
+ h3, h4 {
+   margin-bottom: 1.0rem;
+ }
+
+ h5, h6 {
+   margin-bottom: 0.8rem;
+ }
+
+.card {
+  display: block;
+
+  &.card-body {
+    background:#FFFFFF;
+    color: #444;
+    display: block;
+    
+    transition: background 0.5s;
+    cursor: pointer;
+  }
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  font-weight: bold;
+  margin: 0 1rem 1rem 0;
+  display: inline-block;
+  color: #FFF;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+
+  &.btn-primary {
+    background: lighten($primary, 20%);
+    &:hover {
+      background: lighten($primary, 10%);
+    }
+  }
+
+  &.btn-secondary {
+    background: lighten($secondary, 20%);
+    &:hover {
+      background: lighten($secondary, 10%);
+    }
+  }
+
+  &.btn-success {
+    background: lighten($success, 20%);
+    &:hover {
+      background: lighten($success, 10%);
+    }
+  }
+
+  &.btn-info {
+    background: lighten($info, 20%);
+    &:hover {
+      background: lighten($info, 10%);
+    }
+  }
+
+  &.btn-warning {
+    background: lighten($warning, 20%);
+    &:hover {
+      background: lighten($warning, 10%);
+    }
+  }
+
+  &.btn-danger {
+    background: lighten($danger, 20%);
+    &:hover {
+      background: lighten($danger, 10%);
+    }
+  }
+}
+
