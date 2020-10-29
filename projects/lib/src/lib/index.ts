@@ -1,3 +1,5 @@
+import { from } from 'rxjs';
+
 export * from './components/alert/alert-type.enum';
 export * from './components/alert/alert.component';
 export * from './components/alert/alert.module';
@@ -66,3 +68,12 @@ export * from './components/toggle-switch/toggle-switch.module';
 export * from './components/dialog/dialog.module';
 export * from './components/dialog/dialog.component';
 export * from './components/dialog/overlay-dialog-style.enum';
+
+
+export * from './components/badge/badge-color.enum';
+export * from './components/badge/badge.module';
+export * from './components/badge/badge.component';
+export * from './components/badge/badge-style.enum';
+export * from './components/badge/badge-size.enum';
+export * from './components/badge/badge-shape-enum';
+export * from './components/badge/badge-position.enum'

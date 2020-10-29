@@ -1,0 +1,53 @@
+@import '../_shared/scss/variables';
+@import '../_shared/scss/mixins';
+
+@mixin generate-badge-bordered($color, $border) {
+  border: 2px $border $color;
+  background: $card-background;
+  color: $color;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+
+  &:hover {
+    color: $card-background;
+    background: $color;
+  }
+
+  &:active {
+    border-color: darken($color, 10%);
+    background: darken($color, 10%);
+    box-shadow: none;
+  }
+
+  &:disabled {
+    border-color: lighten($color, 15%);
+    color: lighten($color, 15%);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+@mixin generate-outlined-badges {
+  &.badge-style-outlined {
+    &.badge-color-default {
+      @include generate-badge-bordered($default, solid)
+    }
+    &.badge-color-primary {
+      @include generate-badge-bordered($primary, solid)
+    }
+    &.badge-color-secondary {
+      @include generate-badge-bordered($secondary, solid)
+    }
+    &.badge-color-success {
+      @include generate-badge-bordered($success, solid)
+    }
+    &.badge-color-info {
+      @include generate-badge-bordered($info, solid)
+    }
+    &.badge-color-warning {
+      @include generate-badge-bordered($warning, solid)
+    }
+    &.badge-color-danger {
+      @include generate-badge-bordered($danger, solid)
+    }
+  }
+}

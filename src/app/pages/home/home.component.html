@@ -9,6 +9,18 @@
   
     <div style="margin-top: 1rem;" class="btn btn-primary" (click)="showDialog()">Show Dialog</div>
   
+    <h4>Badge</h4>
+    <div tnBadge 
+        [shape]="BadgeShape.ROUNDED"
+        [color]="BadgeColor.SUCCESS"
+        [position]="BadgePosition"
+    >1</div>
+    
+    <div tnBadge 
+    [shape]="BadgeShape.PILLED"
+    [color]="BadgeColor.WARNING"
+    [position]="BadgePosition"
+>1</div>
   </div>  
 
 

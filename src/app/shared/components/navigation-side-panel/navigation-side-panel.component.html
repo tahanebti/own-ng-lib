@@ -1,13 +1,35 @@
-<div class="navigation-panel">
+<!-- <div class="navigation-panel">
     <div class="navigation-panel-brand">L<span [ngClass]="currentPanelState">ogo</span></div>
     <ul class="navigation-panel-menu" *ngIf="links && links.length > 0">
-      <li *ngFor="let link of links">
+      <li *ngFor="let link of links; let i = index" [class.active]="link.active">
         <a [routerLink]="link.url" 
             [routerLinkActive]="['active']"
             [routerLinkActiveOptions]="{exact: true}">
           <i class="fas fa-home" [ngClass]="link.iconClass"></i>
-          <span [ngClass]="currentPanelState">{{ link.text }}</span>
+          <span [ngClass]="currentPanelState" (click)="toggle(i)">{{ link.text }}</span>
         </a>
       </li>
     </ul>
-  </div>
+  </div> -->
+
+
+  <ul id="accordion" class="accordion" >
+    <div class="navigation-panel-brand">S<span [ngClass]="currentPanelState">adarLy</span></div>
+    <li *ngFor="let menu of links; let i = index" 
+      [class.active]="menu.active">
+      <div [routerLink]="menu.url" 
+      [routerLinkActiveOptions]="{exact: true}"
+      class="menu" (click)="toggle(i)">
+        <i [class]="menu.iconClass"></i>
+       <span [ngClass]="currentPanelState">{{ menu.text }}
+        <i class="fa fa-chevron-down" *ngIf="menu.submenu"></i>
+      </span> 
+      </div>
+      <ul class="submenu" #submenu 
+        [style.height.px]="menu.active ? submenu.scrollHeight : 0">
+        <li *ngFor="let submenu of menu.submenu">
+          <a [href]="submenu.url">{{ submenu.name }}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>  

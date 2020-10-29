@@ -1,0 +1,56 @@
+@import '../_shared/scss/variables';
+@import '../_shared/scss/mixins';
+
+@mixin generate-badge-solid($color) {
+  background: $color;
+  border: 2px solid $color;
+
+  &:hover {
+    background: darken($color, 10%);
+    border: 2px solid darken($color, 10%);
+  }
+
+  &:active {
+    background: darken($color, 12%);
+    border: 2px solid darken($color, 12%);
+    box-shadow: none;
+  }
+
+  &:disabled {
+    background: lighten($color, 15%);
+    border: 2px solid lighten($color, 10%);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+@mixin generate-solid-badges {
+  &.badge-style-solid {
+    &.badge-color-default {
+      @include generate-badge-solid($default);
+    }
+
+    &.badge-color-primary {
+      @include generate-badge-solid($primary);
+    }
+    &.badge-color-secondary {
+      @include generate-badge-solid($secondary);
+    }
+
+    &.badge-color-success {
+      @include generate-badge-solid($success);
+    }
+
+    &.badge-color-info {
+      @include generate-badge-solid($info);
+    }
+
+    &.badge-color-warning {
+      @include generate-badge-solid($warning);
+    }
+
+    &.badge-color-danger {
+      @include generate-badge-solid($danger);
+    }
+  }
+}

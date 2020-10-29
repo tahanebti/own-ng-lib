@@ -1,0 +1,43 @@
+@mixin genrate-position-badges {
+    &.badge-top-left {
+        margin-top: 1rem;
+        margin-left: 1rem;
+        top: 0;
+        left: 0;
+      }
+    
+      &.badge-top-center {
+        margin-top: 1rem;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    
+      &.badge-top-right {
+        margin-top: 1rem;
+        margin-right: 1rem;
+        top: 0;
+        right: 0;
+      }
+    
+      &.badge-bottom-left {
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        bottom: 0;
+        left: 0;
+      }
+    
+      &.badge-bottom-center {
+        margin-bottom: 1rem;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    
+      &.badge-bottom-right {
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        bottom: 0;
+        right: 0;
+      }
+}

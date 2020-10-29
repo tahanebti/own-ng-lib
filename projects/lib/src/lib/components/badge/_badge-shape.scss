@@ -1,0 +1,13 @@
+@mixin generate-shaped-badges {
+    &.badge-shape-squared {
+      border-radius: 0;
+    }
+  
+    &.badge-shape-rounded {
+      border-radius: 4px;
+    }
+  
+    &.badge-shape-pilled {
+      border-radius: 3rem;
+    }
+  }

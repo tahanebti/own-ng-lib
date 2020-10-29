@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonModule, CardModule, DialogModule, OverlayLoaderModule, OverlaySidePanelModule } from 'projects/lib/src/lib';
+import { BadgeModule, ButtonModule, CardModule, DialogModule, OverlayLoaderModule, OverlaySidePanelModule } from 'projects/lib/src/lib';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { HomeSidePanelComponent } from './home-side-panel/home-side-panel.component';
@@ -23,8 +23,8 @@ import { HomeDialogComponent } from './home-dialog/home-dialog.component';
     HomeRoutingModule,
     OverlayLoaderModule,
     SharedModule,
-    ButtonModule
-    
+    ButtonModule,
+    BadgeModule
 
     
   ],

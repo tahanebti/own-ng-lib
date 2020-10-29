@@ -12,7 +12,7 @@ import { NavigationLink } from './shared/components/navigation-link';
 })
 export class AppComponent {
   public configuration: DashboardLayoutConfiguration;
-  public links: NavigationLink[];
+  public links: NavigationLink[] 
   public progressFill: ProgressBarFill = ProgressBarFill.INFO;
   
   constructor() {
@@ -25,9 +25,45 @@ export class AppComponent {
 
   private createLinks() {
     this.links = [
-      new NavigationLink("Home", ['home'], "fas fa-home"),
-      new NavigationLink("Dashboard", ['dashbaord'], "fas fa-tachometer-alt"),
-      new NavigationLink("Account Info", ['account'], "fas fa-user-circle")
-    ]
+    { 
+      text: 'Home',
+      url:  'home',
+      iconClass: 'fa fa-home',
+      active: true,
+    },
+    { 
+      text: 'Front-end',
+      url:  'dashboard',
+      iconClass: 'fa fa-code',
+      active: false,
+      submenu: [
+        { name: 'HTML', url: '#' },
+        { name: 'CSS', url: '#' },
+        { name: 'Javascript', url: '#' }
+      ]
+    },
+    { 
+      text: 'Responsive web',
+      url:  'dashboard',
+      iconClass: 'fa fa-mobile',
+      active: false,
+      submenu: [
+        { name: 'Tablets', url: '#' },
+        { name: 'Mobiles', url: '#' },
+        { name: 'Desktop', url: '#' }
+      ]
+    },
+    { 
+      text: 'Web Browser',
+      url:  '',
+      iconClass: 'fa fa-globe',
+      active: false,
+      submenu: [
+        { name: 'Chrome', url: '#' },
+        { name: 'Firefox', url: '#' },
+        { name: 'Desktop', url: '#' }
+      ]
+    }
+  ];
   }
 }
