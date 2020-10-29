@@ -37,7 +37,7 @@ export class ToggleSwitchComponent implements ControlValueAccessor {
     }
   }
   
-  protected isChecked: boolean;
+  public isChecked: boolean;
 
   constructor() {
     this.disabled = false;

@@ -61,3 +61,8 @@ export * from './components/toggle-switch/toggle-switch-shape.enum';
 export * from './components/toggle-switch/toggle-switch-size.enum';
 export * from './components/toggle-switch/toggle-switch.component'
 export * from './components/toggle-switch/toggle-switch.module';
+
+
+export * from './components/dialog/dialog.module';
+export * from './components/dialog/dialog.component';
+export * from './components/dialog/overlay-dialog-style.enum';

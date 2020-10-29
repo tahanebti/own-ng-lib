@@ -2,10 +2,16 @@
   [overlayStyle]="overlayStyle" 
   [spinnerSize]="spinnerSize" [isLoading]="isLoading">
   <tn-overlay-side-panel></tn-overlay-side-panel>
+  <tn-dialog ></tn-dialog>
   <div style="padding: 1.5rem;">
     <h1>Home</h1>
-    <div style="margin-top: 1rem;" class="btn btn-primary" (click)="show()">Show More</div>
+    <div style="margin-top: 1rem;" class="btn btn-primary" (click)="show()">Show Side-Panel</div>
+  
+    <div style="margin-top: 1rem;" class="btn btn-primary" (click)="showDialog()">Show Dialog</div>
+  
   </div>  
+
+
 
 
   <div class="page-container">
