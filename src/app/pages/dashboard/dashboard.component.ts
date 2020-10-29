@@ -4,6 +4,8 @@ import { AlertType, ProgressBarService, ToasterPosition, ToasterService, ToggleS
 import { ToastType } from 'projects/lib/src/lib/components/toaster/toast-type.enum';
 import { take } from 'rxjs/operators';
 
+import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop'
+
 @Component({
   selector: 'tn-dashboard',
   templateUrl: './dashboard.component.html',
@@ -34,6 +36,9 @@ export class DashboardComponent implements OnInit {
   
   public ToastType = ToastType;
   public tosterPosition: ToasterPosition = ToasterPosition.BOTTOM_RIGHT
+
+
+
 
   constructor(
     private _progressBarService: ProgressBarService,
@@ -87,6 +92,32 @@ export class DashboardComponent implements OnInit {
 
   public print() {
     console.log(this.form.value);
+  }
+
+
+  backlog = [
+    'fix bug',
+    'implement authentication',
+    'buy coffee',
+    'learn Angular',
+    'learn Angular CDK'
+  ];
+
+  sprint = [
+    'setup project'
+  ];
+
+  drop(event: CdkDragDrop<string[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    }
   }
 
 }

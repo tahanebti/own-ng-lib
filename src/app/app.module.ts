@@ -12,6 +12,8 @@ import { AlertModule, CardModule, ToasterModule, ToggleSwitchModule } from 'proj
 import { ProgressBarModule } from 'projects/lib/src/public-api';
 import { HomeModule } from './pages/home/home.module';
 
+import {DragDropModule} from '@angular/cdk/drag-drop';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { HomeModule } from './pages/home/home.module';
     ProgressBarModule,
     CardModule,
     ToasterModule,
-    ToggleSwitchModule
+    ToggleSwitchModule,
+    DragDropModule
   ],
   bootstrap: [AppComponent]
 })
