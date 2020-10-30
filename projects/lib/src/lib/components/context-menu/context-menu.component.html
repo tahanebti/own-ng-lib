@@ -1,0 +1,10 @@
+<div  class="overlay-menu " [class.collapsed]="!isMenuVisible">
+    <div class="overlay" [ngClass]="overlayStyle" 
+     *ngIf="isMenuVisible"  (click)="close()">
+    </div>
+    <div class="menu" >
+      <div class="content">
+        <ng-container #content></ng-container>
+      </div>
+    </div>
+</div>

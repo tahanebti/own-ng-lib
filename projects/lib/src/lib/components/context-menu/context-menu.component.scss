@@ -1,0 +1,78 @@
+@import '../_shared/scss/variables';
+@import '../_shared/scss/mixins';
+
+.overlay-menu {
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    &.overlay-style-transparent {
+      background: transparent;
+    }
+
+    &.overlay-style-dim-dark {
+      background: rgba(#000, 0.3);
+    }
+
+    &.overlay-style-dim-light {
+      background: rgba(#FFF, 0.5);
+    }
+  }
+  
+  .menu {
+    position: fixed;
+    top: 12%;
+    bottom: 0;
+    right: 1%;
+    width: fit-content;
+    margin: 0 auto;
+    background: #FFF;
+    overflow-y: auto;
+    transition: height 0.4s ease;
+    z-index: 101;
+    height: fit-content;
+    @include box-shadow;
+
+    .close,
+    .content {
+      padding: 0 1.25rem;
+    }  
+
+    .close {
+      background: $card-background;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      line-height: 1rem;
+      font-size: 2rem;
+      font-weight: bold;
+      
+      span {
+        cursor: pointer;
+        color: #888;
+        &:hover {
+          color: #292929;
+        }
+      }
+    }
+  }
+
+  &.collapsed {
+    .menu {
+        margin-right: -100%;
+        transition: height 0.4s ease;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .overlay-menu {
+    .menu {
+      width: 100%;
+    }
+  }
+}

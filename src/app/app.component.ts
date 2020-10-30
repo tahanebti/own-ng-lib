@@ -12,7 +12,7 @@ import { NavigationLink } from './shared/components/navigation-link';
 })
 export class AppComponent {
   public configuration: DashboardLayoutConfiguration;
-  public links: NavigationLink[] 
+  public menus: NavigationLink[] 
   public progressFill: ProgressBarFill = ProgressBarFill.INFO;
   
   constructor() {
@@ -24,7 +24,7 @@ export class AppComponent {
   }
 
   private createLinks() {
-    this.links = [
+    this.menus = [
     { 
       text: 'Home',
       url:  'home',
@@ -32,7 +32,7 @@ export class AppComponent {
       active: true,
     },
     { 
-      text: 'Front-end',
+      text: 'Layout',
       url:  'dashboard',
       iconClass: 'fa fa-code',
       active: false,
@@ -43,7 +43,7 @@ export class AppComponent {
       ]
     },
     { 
-      text: 'Responsive web',
+      text: 'Forms',
       url:  'dashboard',
       iconClass: 'fa fa-mobile',
       active: false,
@@ -54,7 +54,7 @@ export class AppComponent {
       ]
     },
     { 
-      text: 'Web Browser',
+      text: 'UI Feateras',
       url:  '',
       iconClass: 'fa fa-globe',
       active: false,
@@ -63,7 +63,95 @@ export class AppComponent {
         { name: 'Firefox', url: '#' },
         { name: 'Desktop', url: '#' }
       ]
-    }
+    },
+    { 
+      text: 'Modal Overlay',
+      url:  '',
+      iconClass: 'fa fa-globe',
+      active: false,
+      submenu: [
+        { name: 'Chrome', url: '#' },
+        { name: 'Firefox', url: '#' },
+        { name: 'Desktop', url: '#' }
+      ]
+    },
+    { 
+      text: 'Extrats Components',
+      url:  '',
+      iconClass: 'fa fa-globe',
+      active: false,
+      submenu: [
+        { name: 'Chrome', url: '#' },
+        { name: 'Firefox', url: '#' },
+        { name: 'Desktop', url: '#' }
+      ]
+    },
+    { 
+      text: 'Maps',
+      url:  '',
+      iconClass: 'fa fa-globe',
+      active: false,
+      submenu: [
+        { name: 'Chrome', url: '#' },
+        { name: 'Firefox', url: '#' },
+        { name: 'Desktop', url: '#' }
+      ]
+    },
+    { 
+      text: 'Charts',
+      url:  '',
+      iconClass: 'fa fa-globe',
+      active: false,
+      submenu: [
+        { name: 'Chrome', url: '#' },
+        { name: 'Firefox', url: '#' },
+        { name: 'Desktop', url: '#' }
+      ]
+    },
+    { 
+      text: 'Editors',
+      url:  '',
+      iconClass: 'fa fa-globe',
+      active: false,
+      submenu: [
+        { name: 'Chrome', url: '#' },
+        { name: 'Firefox', url: '#' },
+        { name: 'Desktop', url: '#' }
+      ]
+    },
+    { 
+      text: 'Tables & data',
+      url:  '',
+      iconClass: 'fa fa-globe',
+      active: false,
+      submenu: [
+        { name: 'Chrome', url: '#' },
+        { name: 'Firefox', url: '#' },
+        { name: 'Desktop', url: '#' }
+      ]
+    },
+    { 
+      text: 'Miscellaneous',
+      url:  '',
+      iconClass: 'fa fa-globe',
+      active: false,
+      submenu: [
+        { name: 'Chrome', url: '#' },
+        { name: 'Firefox', url: '#' },
+        { name: 'Desktop', url: '#' }
+      ]
+    },
+    { 
+      text: 'Auth',
+      url:  '',
+      iconClass: 'fa fa-globe',
+      active: false,
+      submenu: [
+        { name: 'Chrome', url: '#' },
+        { name: 'Firefox', url: '#' },
+        { name: 'Desktop', url: '#' }
+      ]
+    },
   ];
   }
 }

@@ -1,18 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MenuComponent } from './menu.component';
+import { ContextMenuComponent} from './context-menu.component';
 import { MenuService } from './menu.service';
-import { BadgeModule } from '../badge/badge.module';
 
 
 
 @NgModule({
-  declarations: [MenuComponent],
+  declarations: [ContextMenuComponent],
   imports: [
     CommonModule,
-    BadgeModule
   ],
-  exports: [MenuModule],
+  exports: [ContextMenuComponent],
   providers: [MenuService]
 })
-export class MenuModule { }
+export class ContextMenuModule { }

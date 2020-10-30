@@ -7,6 +7,8 @@ import { GridContainerComponent } from './components/grid/grid-container/grid-co
 import { GridCellComponent } from './components/grid/grid-cell/grid-cell.component';
 import { GridCellDirective } from './components/grid/grid-cell.directive';
 import { RouterModule } from '@angular/router';
+import { NavigationBarModule } from './components/navigation-bar/navigation-bar.module';
+import { NavigationMessageComponent } from './components/navigation-message/navigation-message.component';
 
 
 
@@ -17,7 +19,7 @@ import { RouterModule } from '@angular/router';
     NavigationSidePanelComponent, 
     GridContainerComponent, 
     GridCellComponent, 
-    GridCellDirective
+    GridCellDirective, 
   ],
   exports:  [
     NavigationBarComponent, 
@@ -25,11 +27,14 @@ import { RouterModule } from '@angular/router';
     NavigationSidePanelComponent,
     GridContainerComponent, 
     GridCellComponent,
-    GridCellDirective
+    GridCellDirective,
+
   ],
   imports: [
     CommonModule,
-    RouterModule
-  ]
+    RouterModule,
+    NavigationBarModule
+  ],
+ 
 })
 export class SharedModule { }

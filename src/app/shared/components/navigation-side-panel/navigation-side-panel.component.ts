@@ -12,7 +12,7 @@ import { Config, NavigationLink } from '../navigation-link';
 export class NavigationSidePanelComponent implements OnInit, OnDestroy {
 
   @Input()
-  public links: NavigationLink[];
+  public menus: NavigationLink[];
   public config: Config;
   
   private _subscriptionsSubject$: Subject<void>;
@@ -32,13 +32,13 @@ export class NavigationSidePanelComponent implements OnInit, OnDestroy {
   toggle(index: number) {
     console.log(index)
     // if (!this.config.multi) {
-    //   this.links.filter(
+    //   this.menus.filter(
     //     (menu, i) => i !== index && menu.active
     //   ).forEach(menu => menu.active = !menu.active);
     // }
 
 
-    this.links[index].active = !this.links[index].active;
+    this.menus[index].active = !this.menus[index].active;
   }
 
   ngOnDestroy(): void {

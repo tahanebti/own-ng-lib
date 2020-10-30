@@ -7,7 +7,6 @@ import { BadgeStyle } from './badge-style.enum';
 
 
 
-
 @Component({
   selector: 'div[tnBadge],span[tnBadge],a[tnBadge],input[tnBadge],button[tnBadge]',
   template: `

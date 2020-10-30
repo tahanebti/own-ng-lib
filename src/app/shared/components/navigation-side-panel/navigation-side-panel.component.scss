@@ -37,7 +37,7 @@ $text-color-brand:#f71e1e;
 	max-width: 360px;
 	margin: auto;
 	background: #fff;
-  border-radius: 4px;
+  	border-radius: 4px;
   
 	.menu {
 		position: relative;
@@ -46,7 +46,7 @@ $text-color-brand:#f71e1e;
 		font-weight: bold;
 		border-bottom: 1px solid #ccc;
 		cursor: pointer;
-    transition: all 0.4s ease;
+  	    transition: all 0.4s ease;
     
 	}
 	li {
@@ -92,7 +92,7 @@ $text-color-brand:#f71e1e;
   
   span {
       transition: opacity 0.2s;
-      color: $nav-panel-background;
+
       &.open {
         opacity: 1;
       }

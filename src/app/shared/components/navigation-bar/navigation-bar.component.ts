@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { MenuService } from 'projects/lib/src/lib/components/context-menu/menu.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { SidePanelService, SidePanelState } from 'src/app/core';
+import { NavigationNotificationComponent } from '../navigation-notification/navigation-notification.component';
+import { NavigationProfileMenuComponent } from '../navigation-profile-menu/navigation-profile-menu.component';
 
 @Component({
   selector: 'tn-navigation-bar',
@@ -13,9 +16,13 @@ export class NavigationBarComponent implements OnInit {
   private _subscriptionsSubject$: Subject<void>;
   public currentPanelState: SidePanelState;
 
-  constructor(private _sidePanelService: SidePanelService) {
+  constructor(
+    private _sidePanelService: SidePanelService,
+
+    ) {
     this._subscriptionsSubject$ = new Subject<void>();
   }
+ 
 
   ngOnInit(): void {
     this._sidePanelService
@@ -23,6 +30,8 @@ export class NavigationBarComponent implements OnInit {
       .pipe(takeUntil(this._subscriptionsSubject$))
       .subscribe((state: SidePanelState) => this.currentPanelState = state);
   }
+
+ 
 
   public handleSingleClick(): void {
     if (this.currentPanelState === SidePanelState.CLOSE || this.currentPanelState === SidePanelState.COLLAPSE) {
@@ -44,5 +53,7 @@ export class NavigationBarComponent implements OnInit {
     this._subscriptionsSubject$.next();
     this._subscriptionsSubject$.complete();
   }
+
+ 
 
 }

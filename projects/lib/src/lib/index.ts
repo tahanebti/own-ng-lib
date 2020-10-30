@@ -77,3 +77,8 @@ export * from './components/badge/badge-style.enum';
 export * from './components/badge/badge-size.enum';
 export * from './components/badge/badge-shape-enum';
 export * from './components/badge/badge-position.enum'
+
+
+
+export * from './components/context-menu/context-menu.module';
+export * from './components/context-menu/context-menu.component';

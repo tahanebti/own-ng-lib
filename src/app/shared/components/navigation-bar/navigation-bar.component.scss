@@ -9,6 +9,8 @@ $nav-panel-active: darken(#38495F, 2%);
   height: 75px;
   line-height: 75px;
   border-bottom: 1px solid darken($background, 5%);
+  display: flex;
+  justify-content: space-between;
 
   .toggler {
     display: flex;
@@ -25,4 +27,16 @@ $nav-panel-active: darken(#38495F, 2%);
       cursor: pointer;
     }
   }
+}
+
+.navigation-profile{
+  position: relative;
+}
+
+.right-side{
+  display: flex;
+}
+
+.right-side > div {
+  padding: 0 10px;
 }
