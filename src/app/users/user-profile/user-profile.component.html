@@ -1,0 +1,307 @@
+<div class="page-container">
+    <div class="container">
+        <div class="title">
+            <h1>Profile</h1>
+        </div>
+        <div class="action">
+            
+            <button class="Button Button--success Button--bordered" (click)="show()">Edit Profile</button>
+        </div>
+       
+    </div>
+
+<div class="breadcrumb">
+    Dashboard / Profile
+</div>
+
+
+
+<div class="page-layout__content">
+    <div class="page-layout__content-container">
+        <div class="panel">
+           <div class="item-catalog__wrapper">
+            <div class="profile-row">
+                <div class="profile-col col-1">
+                    <div  class="profile-img-wrap">
+                        <div  class="profile-img"><a ><img  alt=""
+                                    src="assets/images/avatar-02.jpg"></a></div>
+                    </div>
+                </div>
+
+                <div class="profile-col col-2">
+                    <div  class="profile-info-left">
+                        <h3  class="user-name m-t-0 mb-0">John Doe</h3>
+                        <h6  class="text-muted">UI/UX Design Team</h6><small 
+                            class="text-muted">Web Designer</small>
+                        <div  class="staff-id">Employee ID : FT-0001</div>
+                        <div  class="small doj text-muted">Date of Join : 1st Jan 2013</div>
+                        <div  class="staff-msg">
+                          <button class="Button Button--success Button--bordered">Send Message</button>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="profile-col col-3">
+                    <div  class="col-md-7">
+                        <ul  class="personal-info">
+                            <li >
+                                <div  class="title">Phone:</div>
+                                <div  class="text"><a  href="">9876543210</a></div>
+                            </li>
+                            <li >
+                                <div  class="title">Email:</div>
+                                <div  class="text"><a  href="">johndoe@example.com</a></div>
+                            </li>
+                            <li >
+                                <div  class="title">Birthday:</div>
+                                <div  class="text">24th July</div>
+                            </li>
+                            <li >
+                                <div  class="title">Address:</div>
+                                <div  class="text">1861 Bayonne Ave, Manchester Township, NJ, 08759</div>
+                            </li>
+                            <li >
+                                <div  class="title">Gender:</div>
+                                <div  class="text">Male</div>
+                            </li>
+                            <li >
+                                <div  class="title">Reports to:</div>
+                                <div  class="text">
+                                    <div  class="avatar-box">
+                                        <div  class="avatar avatar-xs"><img 
+                                                src="assets/img/profiles/avatar-016.jpg" alt=""></div>
+                                    </div><a  
+                                    > Jeffery Lalor </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+           </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="page-layout__content" >
+    <div class="page-layout__content-container">
+        <div class="panel">
+           <div class="item-catalog__wrapper" >
+            <tn-tabset customNavClass="nav-test-class" customTabsClass="container" style="    width: 100%;">
+                <tn-tab tabTitle="Information" [bypassDOM]="true">
+                    <ng-template>
+
+                        <div class="customer__card" >
+                            <h3>Customer Information</h3>
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label class="label-title">FirstName : </label>
+                                    <span>Jon</span>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label class="label-title">LastName : </label>
+                                    <span>Doe</span>
+                                </div>
+        
+                            
+                            </div>
+                            <div class="form-group-row">
+                    
+                                <div class="form-group">
+                                    <label class="label-title">Email : </label>
+                                    <span>test@gmail.com</span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="label-title">Company : </label>
+                                    <span>Sadarly Inc</span>
+                                </div>
+        
+                            </div>
+        
+                            
+                        </div>
+
+                      
+                
+                        <hr>
+
+                        <div class="customer__card">
+                            <h3>Customer Phones : </h3>
+                            
+                            <div class="form-group">
+                                <label class="label-title">Mobile : </label>
+                                <span>+216 55 426 041</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="label-title">Phone 1 : </label>
+                                <span>77 777 666</span>
+                            </div>
+                            
+                            
+                            
+                         
+                                
+                        
+                             
+                             
+
+
+                        </div>
+
+                        <hr>
+
+                        <div class="customer__card">
+                            <h3>Customer Address : </h3>
+                                <div class="form-group">
+                               
+                                    <span>Imm 9 App 174, nasser City</span>
+                                </div>
+
+                                <div class="form-group">
+                                
+                                   <span>Kairouan, 3100 , Tunisia</span>
+                                </div>
+                             
+                            
+
+                          
+                         
+                            
+                       
+                                
+                        
+                             
+                             
+
+
+                        </div>
+                      
+                        <hr>
+
+                        <div class="customer__card">
+                            <h3>Other Information : </h3>
+
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label class="label-title">Authorized outstandings *</label>
+                                  
+                                </div>
+    
+                                <div class="form-group">
+                                    <label class="label-title">Price list *</label>
+                                  
+                                </div>
+
+                              
+
+                                
+                            </div>
+
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label class="label-title">Payment deadline *</label>
+                                   
+                                </div>
+    
+                                  
+                              </div>
+
+
+                        </div>
+
+                        <hr>
+
+                        <div class="btn__wrapper">
+                            <button class="Button Button--default">Cancel</button>
+                            <button class="Button Button--success">Filter</button>
+                        </div>
+
+                    </ng-template>
+                </tn-tab>
+                <tn-tab tabTitle=" Accounting  " [bypassDOM]="true">
+                    <ng-template>
+
+                      <div class="customer__card">
+                        <h3>Customer Information</h3>
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label class="label-title">Begin Date *</label>
+                                <input type="date" class="SearchBox__input">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="label-title">End Date *</label>
+                                <input type="date" class="SearchBox__input">
+                            </div>
+
+                    
+                        </div>
+                      
+                        <div class="btn__wrapper">
+                          <button class="Button Button--default">Reset</button>
+                          <button class="Button Button--success">Filter</button>
+                      </div>
+                        
+                    </div>
+
+                      
+                
+                        <hr>
+
+                     <ag-grid-angular 
+
+                        style="width: 100%; height: 500px;"
+                        class="ag-theme-alpine" 
+                        [rowData]="rowData" 
+                        [columnDefs]="columnDefs"
+                        [rowSelection]="'single'"
+                        animateRows
+                        pagination
+                        rowSelection="multiple"
+                        [frameworkComponents]="frameworkComponents"
+                        >
+                    </ag-grid-angular>
+
+                      
+
+                    </ng-template>
+                  </tn-tab>
+                  <tn-tab tabTitle=" Delevery Note  " [bypassDOM]="true">
+                    <ng-template>
+
+                        <div class="customer__card">
+                            <div class="form-group">
+                              <textarea class="TextArea" name="" id="" cols="30" rows="10"></textarea>
+                          </div>
+                           
+                          
+                        </div>
+
+                 
+                       
+                    </ng-template>
+                  </tn-tab>
+                </tn-tabset>
+           </div>
+        </div>
+    </div>
+</div>     
+
+
+
+
+
+</div>
+
+

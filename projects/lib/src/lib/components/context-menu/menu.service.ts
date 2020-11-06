@@ -30,14 +30,14 @@ export class MenuService {
   }
 
   public setContent(content: Type<any>): void{
-    console.log(content)
+
     this._contentChangeSource.next(content)
   }
 
   public show(): void{
     this._isMenuVisible = true;
     this._closeMenuSource.next(this._isMenuVisible)
-    console.log(this._isMenuVisible)
+ 
   }
 
   public close(): void{

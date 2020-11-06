@@ -32,11 +32,10 @@
     margin: 0 auto;
     background: #FFF;
     overflow-y: auto;
-    transition: margin-right 0.3s;
     z-index: 101;
     height: fit-content;
     @include box-shadow;
-
+    transform: translate3d(0, 50px, 0);
     .close,
     .content {
       padding: 1.25rem;

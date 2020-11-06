@@ -8,7 +8,11 @@ import { GridCellComponent } from './components/grid/grid-cell/grid-cell.compone
 import { GridCellDirective } from './components/grid/grid-cell.directive';
 import { RouterModule } from '@angular/router';
 import { NavigationBarModule } from './components/navigation-bar/navigation-bar.module';
-import { NavigationMessageComponent } from './components/navigation-message/navigation-message.component';
+import { TopicSearchComponent } from './components/topic-search/topic-search.component';
+import { AgGridRenderComponent } from './components/ag-grid-render/ag-grid-render.component';
+import { PopoverModule, TooltipModule } from 'projects/lib/src/lib';
+import { CalenderEventComponent } from './components/calender-event/calender-event.component';
+
 
 
 
@@ -20,6 +24,8 @@ import { NavigationMessageComponent } from './components/navigation-message/navi
     GridContainerComponent, 
     GridCellComponent, 
     GridCellDirective, 
+    TopicSearchComponent, 
+    AgGridRenderComponent, CalenderEventComponent, 
   ],
   exports:  [
     NavigationBarComponent, 
@@ -28,12 +34,17 @@ import { NavigationMessageComponent } from './components/navigation-message/navi
     GridContainerComponent, 
     GridCellComponent,
     GridCellDirective,
+    TopicSearchComponent, 
+    AgGridRenderComponent, 
 
   ],
   imports: [
     CommonModule,
     RouterModule,
-    NavigationBarModule
+    NavigationBarModule,
+    PopoverModule.forRoot({
+      focusButton: 'confirm',
+    }),
   ],
  
 })

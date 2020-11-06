@@ -1,0 +1,40 @@
+
+.SearchBox__input {
+    width: 85%;
+}   
+
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: initial;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    background-color: #f0f0f0;    
+    margin-top: 1.5rem;
+
+}
+
+.empty-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+  
+}
+
+.empty-data-icon {
+    font-size: 3rem;
+    margin-bottom: .5rem;
+    color: #888;
+}
+
+.empty-data-message {
+    font-size: 1rem;
+    margin-bottom: .8rem;
+}

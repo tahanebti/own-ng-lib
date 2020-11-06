@@ -1,5 +1,7 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
-import { OverlaySidePanelService } from 'projects/lib/src/lib';
+import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { DropdownDirective, TOGGLE_STATUS } from 'projects/lib/src/lib';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import { NavigationNotificationComponent } from '../../../navigation-notification/navigation-notification.component';
 
 
@@ -9,20 +11,31 @@ import { NavigationNotificationComponent } from '../../../navigation-notificatio
   styleUrls: ['./notification.component.scss'],
  
 })
-export class NotificationComponent implements AfterViewInit, OnDestroy {
+export class NotificationComponent implements  OnInit, OnDestroy {
 
-  constructor(private _overlaySidePanelService: OverlaySidePanelService) { }
+  ngUnsubscribe: Subject<void> = new Subject<void>();
 
-  ngAfterViewInit(): void {
-    this._overlaySidePanelService.setContent(NavigationNotificationComponent)
+  @ViewChild('myDropdown') myDropdown: DropdownDirective;
+
+  ngOnInit() {
+    this.myDropdown.statusChange()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((status: TOGGLE_STATUS) => {
+        let statusValue: String;
+        /* tslint:disable:no-console */
+        if (status === TOGGLE_STATUS.OPEN) {
+          statusValue = 'Opened';
+        } else if (status === TOGGLE_STATUS.CLOSE) {
+          statusValue = 'Closed';
+        }
+        console.info(`Dropdown status changed to "${statusValue}".`);
+        /* tslint:enable:no-console */
+      });
   }
 
-  
-  public show(): void {
-    this._overlaySidePanelService.show();
+  ngOnDestroy() {
+    this.ngUnsubscribe.next(),
+    this.ngUnsubscribe.complete();
   }
 
-  ngOnDestroy () {
-    console.log('NotificationComponent destroyed!!');
-  }
 }

@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
-import { OverlaySidePanelService } from 'projects/lib/src/lib';
+
 import { NavigationMessageComponent } from '../../../navigation-message/navigation-message.component';
 
 @Component({
@@ -7,17 +7,18 @@ import { NavigationMessageComponent } from '../../../navigation-message/navigati
   templateUrl: './message.component.html',
   styleUrls: ['./message.component.scss']
 })
-export class MessageComponent implements  AfterViewInit , OnDestroy{
+export class MessageComponent implements OnInit, OnDestroy {
 
-  constructor(private _overlaySidePanelService: OverlaySidePanelService) { }
-
-  ngAfterViewInit(): void {
-    this._overlaySidePanelService.setContent(NavigationMessageComponent)
+  
+  constructor() { }
+  
+  ngOnInit(): void {
+    
   }
 
   
   public show(): void {
-    this._overlaySidePanelService.show();
+   // this._overlaySidePanelService.showMe(NavigationMessageComponent);
   }
 
   ngOnDestroy () {

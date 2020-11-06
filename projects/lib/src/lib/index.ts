@@ -17,11 +17,6 @@ export * from './components/card/card-header.component';
 export * from './components/card/card-type.enum';
 
 
-// Overlay Side Panel
-export * from './components/overlay-side-panel/overlay-side-panel.component';
-export * from './components/overlay-side-panel/overlay-side-panel.module';
-export * from './components/overlay-side-panel/overlay-side-panel.service';
-export * from './components/overlay-side-panel/overlay-side-panel-style.enum';
 
 // Overlay Loader
 export * from './components/overlay-loader/overlay-loader.component';
@@ -82,3 +77,36 @@ export * from './components/badge/badge-position.enum'
 
 export * from './components/context-menu/context-menu.module';
 export * from './components/context-menu/context-menu.component';
+
+
+export * from './components/multi-select/click-outside.directive';
+export * from './components/multi-select/list-filter.pipe';
+export * from './components/multi-select/multi-select.component';
+export * from './components/multi-select/multi-select.module';
+export * from './components/multi-select/multiselect';
+
+
+export * from './components/tooltip/tooltip.component';
+export * from './components/tooltip/tooltip.module';
+export * from './components/tooltip/tooltipe.directive';
+
+
+
+export * from './components/popover/confirmation-popover-options.provider';
+export * from './components/popover/confirmation-popover-window-options.provider';
+export * from './components/popover/confirmation-popover.directive';
+export * from './components/popover/focucs.directive';
+export * from './components/popover/popover.component';
+export * from './components/popover/popover.module';
+
+
+export * from './components/tabset/tab/tab.component';
+export * from './components/tabset/tabset.component';
+export * from './components/tabset/tabset.module';
+
+
+export * from './components/dropdown/dropdown-menu.directive';
+export * from './components/dropdown/dropdown-toggle.directive';
+export * from './components/dropdown/dropdown.directive';
+export * from './components/dropdown/dropdown.module';
+export * from './components/dropdown/toggle-status';

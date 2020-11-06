@@ -1,0 +1,138 @@
+<div class="page-container">
+    <div class="container">
+        <div class="title">
+            <h1>Invoice</h1>
+        </div>
+        <div class="action">
+            
+            <button class="Button Button--default Button--bordered" [routerLink]="['/suppliers', 'new']">CSV</button>
+            <button class="Button Button--default Button--bordered" [routerLink]="['/suppliers', 'new']">PDF</button>
+            <button class="Button Button--default Button--bordered" [routerLink]="['/suppliers', 'new']">
+                <i class="fa fa-print fa-lg"></i>
+                Print
+            </button>
+        </div>
+       
+    </div>
+
+
+    <div class="page-layout__content">
+        <div class="page-layout__content-container">
+            <div class="panel">
+                <div class="card__wrapper">
+                    <div class="card__header">
+
+                        <div class="card-row">
+                            
+                        <div class="card-col">
+                            <div class="company-logo">
+                                <img src="assets/images/logo.png" alt="">
+                            </div>
+                            <ul  class="list-unstyled">
+                                <li >Dreamguy's Technologies</li>
+                                <li >3864 Quiet Valley Lane,</li>
+                                <li >Sherman Oaks, CA, 91403</li>
+                                <li >GST No:</li>
+                            </ul>
+                        </div>
+
+                  
+                        <div class="card-col">
+                            <div  class="invoice-details">
+                                <h3  class="text-uppercase">Invoice #INV-0001</h3>
+                                <ul  class="list-unstyled">
+                                    <li >Date: <span >March 12, 2019</span></li>
+                                    <li >Due date: <span >April 25, 2019</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                  
+
+                    </div>
+
+                    <div class="card__body">
+                        <div class="card-row">
+                            <div class="card-col">
+                                <strong>Invoice to : </strong>
+                                <ul  class="list-unstyled">
+                                    <li >
+                                        <h5 ><strong >Barry Cuda</strong></h5>
+                                    </li>
+                                    <li ><span >Global Technologies</span></li>
+                                    <li >5754 Airport Rd</li>
+                                    <li >Coosada, AL, 36020</li>
+                                    <li >United States</li>
+                                    <li >888-777-6655</li>
+                                    <li ><a >barrycuda@example.com</a></li>
+                                </ul>
+                            </div> 
+
+                            <div  class="card-col"><span 
+                                    class="text-muted">Payment Details:</span>
+                                <ul  class="list-unstyled invoice-payment-details">
+                                    <li >
+                                        <h5 >Total Due: <span  class="text-right">$8,750</span></h5>
+                                    </li>
+                                    <li >Bank name: </li>
+                                    <li >Country: </li>
+                                    <li >City: </li>
+                                    <li >Address: </li>
+                                    <li >IBAN: </li>
+                                    <li >SWIFT code: </li>
+                                </ul>
+                            </div>
+
+                            <div  class="card-col"><span 
+                                class="text-muted"></span>
+                            <ul  class="list-unstyled invoice-payment-details">
+                                <li >
+                                    <h5 ><span  class="text-right">$8,750</span></h5>
+                                </li>
+                                <li ><span >Profit Bank Europe</span></li>
+                                <li > <span >United Kingdom</span></li>
+                                <li > <span >London E1 8BF</span></li>
+                                <li > <span >3 Goodman Street</span></li>
+                                <li > <span >KFH37784028476740</span></li>
+                                <li > <span >BPT4E</span></li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="card__footer">
+                        <ag-grid-angular 
+   
+                        style="width: 100%; height: 500px;"
+                        class="ag-theme-alpine" 
+                        [rowData]="rowData" 
+                        [columnDefs]="columnDefs"
+                        [rowSelection]="'single'"
+                        animateRows
+                        pagination
+                        rowSelection="multiple"
+                        [frameworkComponents]="frameworkComponents"
+                        >
+                    </ag-grid-angular>
+                
+                        <div  class="invoice-info">
+                            <h5 >Other information</h5>
+                            <p  class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed
+                                dictum ligula, cursus blandit risus. Maecenas eget metus non tellus dignissim aliquam ut a ex. Maecenas sed
+                                vehicula dui, ac suscipit lacus. Sed finibus leo vitae lorem interdum, eu scelerisque tellus fermentum.
+                                Curabitur sit amet lacinia lorem. Nullam finibus pellentesque libero, eu finibus sapien interdum vel</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+           
+            </div>
+        </div>
+
+     
+    </div>
+    
+
+
+</div>

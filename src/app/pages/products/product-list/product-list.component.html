@@ -1,0 +1,485 @@
+<tn-overlay-side-panel ></tn-overlay-side-panel>
+<div class="page-container">
+    <h1>Products</h1>
+    <div class="Search-wrapper">
+        <div class="container">
+            <input type="text" class="SearchBox__input" >
+            <button class="Button Button--success">Search</button>
+            <button class="Button Button--default Button--bordered "  (click)="showMe()">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-filter"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                            </button>
+        </div>
+    </div>
+
+    
+
+    <!-- <div class="horizontal-filter">
+        <div class="select">
+            <div class="label-select"><label for=""></label>
+              <div class="select-wrapper">
+                <select id="mySelect" name="" class="category-select"  >
+                  <option value="">Select Sector </option>
+                  <option   >name</option>
+                </select>
+                <div class="icon-select">
+                  <svg width="16px" height="16px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                      fill-rule="evenodd">
+                      <path class="rui-u_VZV"
+                        d="M512 601.6l-268.8-264.533h-72.533v72.533l341.333 341.333 341.333-341.333v-72.533h-72.533l-268.8 264.533z">
+                      </path>
+                    </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="select">
+            <div class="label-select"><label for=""></label>
+              <div class="select-wrapper">
+                <select id="mySelect" name="" class="category-select"  >
+                  <option value="">Select Sector </option>
+                  <option   >name</option>
+                </select>
+                <div class="icon-select">
+                  <svg width="16px" height="16px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                      fill-rule="evenodd">
+                      <path class="rui-u_VZV"
+                        d="M512 601.6l-268.8-264.533h-72.533v72.533l341.333 341.333 341.333-341.333v-72.533h-72.533l-268.8 264.533z">
+                      </path>
+                    </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+    </div> -->
+
+
+    
+    <div class="item-catalog__wrapper">
+        <ul class="categories-list">
+            <li class="featured">
+                <button  type="button" class="margin btn">
+                    <svg id="icon-men-s-clothing-accessories" viewBox="0 0 40 40">
+                        <g>
+                          <path d="M9 29h2v2H9v-2zm4 0h2v2h-2v-2zm12 0h2v2h-2v-2zm4 0h2v2h-2v-2zM9 25h2v2H9v-2zm4 0h2v2h-2v-2zm12 0h2v2h-2v-2zm4 0h2v2h-2v-2zM9 21h2v2H9v-2zm4 0h2v2h-2v-2zm12 0h2v2h-2v-2zm4 0h2v2h-2v-2zM9 17h2v2H9v-2zm20 0h2v2h-2v-2zM9 13h2v2H9v-2zm20 0h2v2h-2v-2zm-12-3h6l-3.05 4.02L17 10z" id="Transparent" opacity="0.2"></path>
+                          <path d="M31 7a3 3 0 0 1 3 3v22a3 3 0 0 1-3 3h-8.33L20 37l-2.67-2H9a3 3 0 0 1-3-3V10a3 3 0 0 1 3-3h.61l.44-1.32.02-.04.04-.07a1 1 0 0 1 .16-.25l.04-.04a.98.98 0 0 1 .28-.19l.06-.02c.1-.04.22-.07.34-.07H29a1 1 0 0 1 .34.07l.06.02c.1.05.2.11.28.2.02 0 .02.02.04.03.06.07.12.16.16.25l.04.07.02.04.44 1.32H31zm-7.41 3H16.4l3.6 3.59L23.59 10zm4.97-2.15l-7.2 7.2 2.02 2.3 5.52-8.5-.34-1zm-17.46 1l5.52 8.5 2.01-2.3-7.2-7.2-.33 1zM31 9h-.02a1 1 0 0 1-.14.54l-6.5 10a1 1 0 0 1-1.6.12l-.18-.22-1.76 1.76L23.75 33H31a1 1 0 0 0 1-1V10a1 1 0 0 0-1-1zM17.44 19.44l-.19.22a1 1 0 0 1-1.59-.12l-6.5-10A.98.98 0 0 1 9.02 9H9a1 1 0 0 0-1 1v22a1 1 0 0 0 1 1h7.25l2.95-11.8-1.76-1.76zM26.6 7H13.4l1.05 1.05a.47.47 0 0 1 .2-.05h10.67c.07 0 .14.02.2.05L26.6 7z" id="Shape1"></path>
+                        </g>
+                      </svg>
+                <span  class="featured-categories__title">Men's Clothing &amp; Accessories</span></button>
+            </li>
+            <li class="featured">
+                <button  type="button" class="margin btn">
+                    <svg id="icon-women-s-clothing-accessories" viewBox="0 0 40 40">
+                        <g>
+                          <path d="M11 30h18v2H11v-2zm2-4h14v2H13v-2zm2-4h10v2H15v-2zm1-4h8v2h-8v-2z" id="Transparent" opacity="0.2"></path>
+                          <path d="M17.51 8.23c.8.63 1.6.94 2.41.94a4.1 4.1 0 0 0 2.63-1.1l.82-4.43a1 1 0 0 1 1.93-.16l2.45 6.83a2 2 0 0 1 0 1.37L25 19.11l6.33 13.46a1 1 0 0 1-.5 1.34C30.4 35.12 29.07 36 27.5 36c-1.52 0-2.82-.83-3.3-2h-.43c-.55 1.17-2.03 2-3.77 2-1.74 0-3.22-.83-3.77-2h-.43c-.48 1.17-1.78 2-3.3 2-1.56 0-2.89-.88-3.34-2.09a1 1 0 0 1-.49-1.34L15 19.13l-2.75-7.45a2 2 0 0 1 0-1.36l2.45-6.87a1 1 0 0 1 1.92.15l.9 4.63zm5.68 11.73a2 2 0 0 1-.07-1.55L25.87 11l-1.2-3.35-.7 3.72a2 2 0 0 1-.5 1l-1.86 2a2 2 0 0 1-2.84.09l-2.1-2a2 2 0 0 1-.6-1.07l-.72-3.8-1.22 3.4 2.75 7.45a2 2 0 0 1-.07 1.55L10.8 32.76c.1.14.18.29.24.45.15.42.73.79 1.46.79.71 0 1.28-.35 1.45-.76A2 2 0 0 1 15.8 32h.43a2 2 0 0 1 1.8 1.15c.21.43.99.85 1.97.85s1.76-.42 1.96-.85A2 2 0 0 1 23.77 32h.43a2 2 0 0 1 1.85 1.24c.17.4.74.76 1.45.76.73 0 1.3-.37 1.46-.79a2 2 0 0 1 .24-.46l-6.01-12.8z" id="Shape1"></path>
+                        </g>
+                      </svg>
+                <span  class="featured-categories__title">Women's Clothing & Accessories</span></button>
+            </li>
+            <li class="featured">
+                <button  type="button" class="margin btn">
+                    <svg id="icon-toys-hobbies" viewBox="0 0 40 40">
+                        <ellipse id="Transparent" opacity="0.2" cx="20" cy="18" rx="6" ry="3"></ellipse>
+                        <path d="M10.41 18.49a9.46 9.46 0 0 1-1.21-6.92 4 4 0 1 1 4.66-6.36A9.46 9.46 0 0 1 18.5 4h3c1.68 0 3.27.44 4.64 1.2A3.99 3.99 0 0 1 33 8a4 4 0 0 1-2.2 3.57 9.54 9.54 0 0 1-1.21 6.92 9.96 9.96 0 0 1 2.4 6.17c.26.1.5.2.74.34 2.4 1.38 2.99 4.83 1.33 7.7-1.66 2.87-4.94 4.07-7.33 2.7a4.24 4.24 0 0 1-1.2-1.04c-.47.18-.95.32-1.45.42a7.41 7.41 0 0 1-8.16 0c-.48-.1-.95-.23-1.4-.4-.33.4-.73.74-1.19 1.01-2.4 1.38-5.67.18-7.33-2.7-1.66-2.86-1.06-6.3 1.33-7.69.22-.13.44-.23.67-.31a9.96 9.96 0 0 1 2.41-6.2zm1.26 1.62a7.96 7.96 0 0 0-1.65 4.35 5.8 5.8 0 0 1 2.97 1.28l.81-3.98a9.5 9.5 0 0 1-2.13-1.65zm4 2.46l-1 4.9a5.43 5.43 0 0 0-.01.23 6.71 6.71 0 0 1 .9 4.01 5.43 5.43 0 0 0 8.93-.08 6.72 6.72 0 0 1 .88-3.88 5.52 5.52 0 0 0-.05-.27l-1-4.9a9.5 9.5 0 0 1-2.82.42h-3a9.5 9.5 0 0 1-2.82-.43zm10.53-.81l.82 4.02a5.83 5.83 0 0 1 2.96-1.32 7.96 7.96 0 0 0-1.65-4.35 9.54 9.54 0 0 1-2.13 1.65zm-13.87 11.9c1.36-.78 1.74-2.99.6-4.96-1.14-1.98-3.24-2.75-4.6-1.97-1.36.79-1.74 2.99-.6 4.97 1.14 1.97 3.24 2.74 4.6 1.96zm15.4 0c1.36.78 3.46.01 4.6-1.96 1.14-1.98.76-4.18-.6-4.97-1.36-.78-3.46-.01-4.6 1.97-1.14 1.97-.76 4.18.6 4.96zM14.84 6.96l-1.34.74-1.07-1.1a2 2 0 1 0-2.33 3.18l1.36.7-.3 1.5A7.5 7.5 0 0 0 18.5 21h2.99a7.5 7.5 0 0 0 7.35-9.02l-.31-1.5 1.36-.7a2 2 0 1 0-2.33-3.18L26.5 7.7l-1.34-.75A7.46 7.46 0 0 0 21.5 6h-3c-1.3 0-2.55.33-3.66.95z" id="Shape1" fill-rule="nonzero"></path>
+                        <path d="M16 10a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1z" id="Shape2"></path>
+                        <path d="M18.83 15h2.34a1 1 0 0 1 .56 1.83L20 18l-1.73-1.17a1 1 0 0 1 .56-1.83z" id="Shape3"></path>
+                        <path d="M24 10a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1z" id="Shape4"></path>
+                      </svg>
+                <span  class="featured-categories__title">Toys & Hobbies</span></button>
+            </li>
+            <li class="featured">
+                <button  type="button" class="margin btn">
+                    <svg id="icon-beauty-health" viewBox="0 0 40 40">
+                        <g>
+                          <path d="M12.03 25.86c2.68 1.57 6.24 1.62 10.7.17 3.54-1.15 5.96-1.64 7.26-1.47L30 25c0 2.9-.92 5.6-2.53 7.64a44.7 44.7 0 0 1-2.3 1.36H16.8l-.35-.17c-.42-.21-1-.52-1.72-.94a12.1 12.1 0 0 1-2.71-7.03zM16 28a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm6 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm3.5-3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" id="Transparent" opacity="0.2"></path>
+                          <path d="M24 10v1a2 2 0 0 1-.51 1.33C28.37 13.67 32 18.83 32 25c0 3.57-1.22 6.8-3.19 9.15C26.87 35.38 25.77 36 25.5 36h-9c-.25 0-1.26-.51-3.05-1.54A14.16 14.16 0 0 1 10 25c0-6.17 3.63-11.33 8.51-12.67A2 2 0 0 1 18 11v-1h-1.19c-.67 1.73-3.01 3-5.81 3-3.31 0-6-1.8-6-4s2.69-4 6-4c2.8 0 5.14 1.27 5.81 3H18V7c0-1.1.9-2 2-2h2a2 2 0 0 1 2 2v1h2v2h-2zm-7.54 23.83l.35.17h8.35l.4-.2c.46-.27 1.1-.65 1.9-1.16A12.32 12.32 0 0 0 30 25c0-6.14-4.11-11-9-11s-9 4.86-9 11c0 3.03 1 5.84 2.74 7.89.73.42 1.3.73 1.72.94zM11 11c2.34 0 4-1.1 4-2 0-.9-1.66-2-4-2S7 8.1 7 9c0 .9 1.66 2 4 2z" id="Shape-1" fill-rule="nonzero"></path>
+                          <path d="M18.6 16.54a1 1 0 1 1 .84 1.81 5.85 5.85 0 0 0-2.74 3.1 1 1 0 0 1-1.84-.79 7.82 7.82 0 0 1 3.73-4.12z" id="Shape-2" fill-rule="nonzero"></path>
+                        </g>
+                      </svg>
+                <span  class="featured-categories__title">Beauty & Health</span></button>
+            </li>
+            <li class="featured">
+                <button  type="button" class="margin btn">
+                    <svg id="icon-watches" viewBox="0 0 40 40">
+                        <g fill-rule="nonzero">
+                          <path d="M28.9 15.5c.7 1.3 1.1 2.9 1.1 4.5a10.03 10.03 0 0 1-19 4.4 12 12 0 0 0 17.9-8.9zM14 20c0 .6-.4 1-1 1h-1c-.6 0-1-.4-1-1s.4-1 1-1h1c.6 0 1 .4 1 1z" id="Transparent" opacity="0.2"></path>
+                          <path d="M32 20c0-3.5-1.6-6.7-4-8.9V7.8c0-1.3-.1-1.8-.4-2.3-.3-.5-.6-.8-1.1-1.1-.5-.3-1-.4-2.3-.4h-8.4c-1.3 0-1.8.1-2.3.4-.5.3-.8.6-1.1 1.1-.3.5-.4 1-.4 2.3V11c-2.4 2.3-4 5.5-4 9s1.6 6.7 4 8.9v3.2c0 1.3.1 1.8.4 2.3.3.5.6.9 1.1 1.1.5.2 1 .4 2.3.4h8.3c1.3 0 1.8-.1 2.3-.4.5-.3.9-.6 1.1-1.1.2-.5.4-1 .4-2.3v-3.2c2.5-2.2 4.1-5.4 4.1-8.9zM14 7.8c0-.9 0-1.1.2-1.4l.3-.3c.2-.1.4-.1 1.3-.1h8.3c.9 0 1.1 0 1.4.2l.3.3c.2.2.2.4.2 1.3v1.8c-1.8-1-3.8-1.6-6-1.6s-4.2.6-6 1.6V7.8zm12 24.4c0 .9 0 1.1-.2 1.4l-.3.3c-.2.1-.4.1-1.3.1h-8.4c-.9 0-1.1 0-1.4-.2l-.3-.3c-.1-.2-.1-.4-.1-1.3v-1.8c1.8 1 3.8 1.6 6 1.6s4.2-.6 6-1.6v1.8zm0-4.2c-1.7 1.3-3.7 2-6 2s-4.3-.8-6-2c-.8-.6-1.4-1.2-2-2-1.3-1.7-2-3.7-2-6s.7-4.3 2-6c.6-.8 1.2-1.4 2-2 1.7-1.3 3.7-2 6-2s4.3.8 6 2c.8.6 1.4 1.2 2 2 1.3 1.7 2 3.7 2 6s-.7 4.3-2 6c-.6.7-1.2 1.4-2 2z" id="Shape1"></path>
+                          <path d="M25.1 23.7l-2.8-2.8c-.1-.1-.3-.2-.4-.2.1-.3.1-.5.1-.7 0-.7-.4-1.4-1-1.7V13c0-.6-.4-1-1-1s-1 .4-1 1v5.3c-.6.3-1 1-1 1.7 0 1.1.9 2 2 2 .2 0 .4 0 .6-.1 0 .1.1.3.2.4l2.8 2.8c.4.4 1 .4 1.4 0 .5-.4.5-1 .1-1.4z" id="Shape"></path>
+                        </g>
+                      </svg>
+                <span  class="featured-categories__title">Watches</span></button>
+            </li>
+            <li class="featured">
+                <button  type="button" class="margin btn">
+                    <svg id="icon-jewelry-accessories" viewBox="0 0 40 40">
+                        <g>
+                          <path d="M15.93 18.31l-2.14-2.14A9.94 9.94 0 0 1 19 14.05v3.03c-1.13.16-2.18.6-3.07 1.23zM14.4 28.2l-2.14 2.14A9.95 9.95 0 0 1 10.05 25h3.03a6.95 6.95 0 0 0 1.32 3.19zm9.9 1.32l2.14 2.14a9.95 9.95 0 0 1-5.44 2.3v-3.03a6.96 6.96 0 0 0 3.3-1.4zM29.95 23h-3.03a6.95 6.95 0 0 0-1.32-3.19l2.14-2.14a9.94 9.94 0 0 1 2.2 5.33z" id="Transparent" opacity="0.2"></path>
+                          <path d="M22 10a2 2 0 0 1-4 0l.01-.1A2 2 0 0 1 19.98 8h.04a2 2 0 0 1 1.97 1.9l.01.1zm2.19 8.4c-.92-.69-2-1.15-3.19-1.32v-3.03c2.01.2 3.85 1 5.33 2.2l-2.14 2.15zm2.73 4.6a6.96 6.96 0 0 0-1.32-3.19l2.14-2.14a9.94 9.94 0 0 1 2.2 5.33h-3.02zm-1.23 5.07A6.95 6.95 0 0 0 26.92 25h3.03a9.94 9.94 0 0 1-2.12 5.2l-2.14-2.13zM21 30.92a6.97 6.97 0 0 0 3.3-1.4l2.14 2.13a9.95 9.95 0 0 1-5.44 2.3v-3.03zm-5.19-1.32c.92.69 2 1.15 3.19 1.32v3.03c-2.01-.2-3.85-1-5.33-2.2l2.14-2.15zM13.08 25a6.96 6.96 0 0 0 1.32 3.19l-2.14 2.14A9.95 9.95 0 0 1 10.05 25h3.03zm1.4-5.3a6.95 6.95 0 0 0-1.4 3.3h-3.03a9.95 9.95 0 0 1 2.3-5.44l2.14 2.14zM19 17.07c-1.13.16-2.18.6-3.07 1.23l-2.14-2.14A9.95 9.95 0 0 1 19 14.05v3.03zm3.75 2.75a5.01 5.01 0 0 1 .88 7.59 4.97 4.97 0 0 1-7.8-.67 4.97 4.97 0 0 1 .75-6.38A5.13 5.13 0 0 1 20 19c1.02 0 1.96.3 2.75.83zM33.01 3.5a1 1 0 0 0-1.78-.92c-1.27 2.49-4.28 4.39-7.98 5.1a3.99 3.99 0 0 0-6.5 0c-3.72-.71-6.74-2.63-8-5.13a1 1 0 1 0-1.79.9C8.5 6.47 11.9 8.7 16.04 9.58c-.01.14-.04.28-.04.42 0 .92.32 1.76.84 2.43a12 12 0 1 0 6.31 0A3.9 3.9 0 0 0 24 10c0-.14-.03-.28-.04-.42C28.08 8.71 31.48 6.5 33 3.5z" id="Shape1"></path>
+                        </g>
+                      </svg>
+                <span  class="featured-categories__title">Jewelry & Accessories</span></button>
+            </li>
+            <li class="featured">
+                <button  type="button" class="margin btn">
+                    <svg id="icon-home-garden" viewBox="0 0 40 40">
+                        <g fill-rule="evenodd">
+                          <path d="M13 26h14v2H13v-2zm1 4h12v2H14v-2z" opacity=".2"></path>
+                          <path d="M18.78 20a1 1 0 0 1-.07-.51 8.03 8.03 0 0 1 .18-.93 7.92 7.92 0 0 0-.9-2.55C10.31 16.98 6.34 12.94 5 5.17a1 1 0 0 1 .56-1.07c7.96-3.83 16.27 2.68 14.1 10.36a1 1 0 0 1-.12.26c.17.3.33.61.47.91 1.57-8.37 9.59-12.31 16.47-8.5a1 1 0 0 1 .48 1.11c-1.92 7.73-7.16 11.76-15.22 9.1a1 1 0 0 1-.4.43 5.46 5.46 0 0 0-.43.98l.02.47a1 1 0 0 1-.28.69 1 1 0 0 1-.03.09H29a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-.26l-1.41 9.44A3 3 0 0 1 24.36 36h-8.72a3 3 0 0 1-2.97-2.56L11.26 24H11a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h7.78zm7.94 4H13.28l1.37 9.15a1 1 0 0 0 .99.85h8.72a1 1 0 0 0 1-.85L26.71 24zM10.62 8.96a19.55 19.55 0 0 1 6.12 5.16c-5.55.35-8.41-2.58-9.61-8.52 5.68-2.22 11.2 1.76 10.85 6.87a21.57 21.57 0 0 0-6.42-5.27 1 1 0 1 0-.95 1.77zm12.1 4.6c2.11-5.06 7.32-7.23 12.1-5.04-1.7 5.91-5.55 8.81-11.62 7.16 1.5-1.19 3.67-2.23 6.62-3.24a1 1 0 0 0-.64-1.89 27 27 0 0 0-6.46 3z"></path>
+                        </g>
+                      </svg>
+                <span  class="featured-categories__title">Home & Garden</span></button>
+            </li>
+            <li class="featured">
+                <button  type="button" class="margin btn">
+                    <svg id="icon-mother-kids" viewBox="0 0 40 40">
+                        <g>
+                          <path d="M13 26.17a11.07 11.07 0 0 0 8.4.47c3.05-1 4.92-1.54 5.6-1.58V33a1 1 0 0 1-1 1H14a1 1 0 0 1-1-1v-6.83zM20 30a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm3.5-2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" id="Transparent" opacity="0.2"></path>
+                          <path d="M26.83 12H27v2.17A3 3 0 0 1 29 17v16a3 3 0 0 1-3 3H14a3 3 0 0 1-3-3V17a3 3 0 0 1 2-2.83V12h.17c.5-1.58 1.98-2.89 3.95-3.54C17.04 7.64 17 7 17 6.65 17 4.63 18.34 3 20 3s3 1.63 3 3.65c0 .35-.04.99-.12 1.8 1.97.66 3.46 1.97 3.95 3.55zM14 16a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V17a1 1 0 0 0-1-1H14zm8.25-5.65l-1.5-.5.14-1.58c.07-.75.11-1.35.11-1.62C21 5.66 20.46 5 20 5c-.46 0-1 .66-1 1.65 0 .27.04.87.1 1.62l.16 1.58-1.51.5A4.48 4.48 0 0 0 15.37 12h9.26a4.48 4.48 0 0 0-2.38-1.65z" id="Shape1"></path>
+                          <path d="M15 18h4v2h-4v-2zm0 4h4v2h-4v-2z" id="Shape2"></path>
+                        </g>
+                      </svg>
+                <span  class="featured-categories__title">Mother & Kids</span></button>
+            </li>
+            <li class="featured">
+                <button  type="button" class="margin btn">
+                    <svg id="icon-sports-entertainment" viewBox="0 0 40 40">
+                        <g>
+                          <path d="M33 20a13 13 0 0 1-23.66 7.44 15 15 0 0 0 21.63-14.43A12.94 12.94 0 0 1 33 20z" id="Transparent" fill-rule="nonzero" opacity="0.2"></path>
+                          <path d="M20 7a13 13 0 1 0 0 26 13 13 0 0 0 0-26zm0-2a15 15 0 1 1 0 30 15 15 0 0 1 0-30z" id="Shape1" fill-rule="nonzero"></path>
+                          <path d="M16.84 18.74c2.7 1.66 3.53 3.47 4.23 7.34.68 3.73 1.4 5.1 4.2 6.48l-.89 1.8c-3.49-1.72-4.5-3.63-5.27-7.92-.6-3.3-1.2-4.66-3.17-5.9a41.84 41.84 0 0 0-3.27 10.74l-1.97-.33a43.85 43.85 0 0 1 3.42-11.22c-2.86-.92-5.29-.32-7.11 1.16l-1.26-1.55c2.38-1.93 5.58-2.69 9.26-1.42.3-.57.61-1.14.94-1.7-3.7-1.68-6.46-2.57-8.22-2.66l.11-2c2.1.11 5.14 1.1 9.18 2.96.3-.44.58-.85.88-1.26a5.62 5.62 0 0 1-2.17-2.61c-.17-.42-.25-.67-.45-1.42-.32-1.17-.53-1.56-1.16-1.95l1.05-1.7c1.17.71 1.6 1.5 2.04 3.13.18.66.25.87.37 1.18.3.72.75 1.28 1.56 1.8 2.1-2.51 4.4-4.35 6.91-5.5L26.89 8a17.7 17.7 0 0 0-5.74 4.41c.9.1 2.08.02 3.93-.2 1.34-.16 2.02-.22 2.83-.24 2.2-.07 4 .3 5.65 1.31l-1.06 1.7a7.71 7.71 0 0 0-4.53-1.02c-.73.03-1.37.09-2.66.24-2.78.32-4.27.38-5.6-.04a31 31 0 0 0-.86 1.22l.92.45a51.04 51.04 0 0 1 14 10.09l-1.42 1.39a49.05 49.05 0 0 0-14.58-10.23c-.32.54-.63 1.1-.93 1.66z" id="Shape2"></path>
+                        </g>
+                      </svg>
+                <span  class="featured-categories__title">Sports & Entertainment</span></button>
+            </li>
+            <li class="featured">
+              
+                <button  type="button" class="margin btn">
+                    <div class="dropdown"  #myDropdown tnDropdown>
+                        <span class="fake-link dropdown-toggle greetings" tnDropdownToggle>
+                       
+                            <svg id="icon-dots" viewBox="0 0 40 40">
+                                <g fill-rule="nonzero">
+                                  <path d="M12 19a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm0-2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" id="Rectangle-47"></path>
+                                  <path d="M20 19a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm0-2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" id="Rectangle-47-Copy-13"></path>
+                                  <path d="M28 19a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm0-2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" id="Rectangle-47-Copy-14"></path>
+                                </g>
+                              </svg>
+                        </span>      
+                        <span  class="featured-categories__title">More categories</span>
+                        <ul class="dropdown-menu" tnDropdownMenu>
+                          <li><a class="neat" >you have a new Like</a></li>
+                          <li><a class="neat" >you have a new Like</a></li>
+                          <li><a class="neat" >you have a new Like</a></li>
+                          <li><a class="neat" >you have a new Like</a></li>
+                          <li><a class="neat" >you have a new Like</a></li>
+                          <li><a class="neat" >you have a new Like</a></li>
+                          <li><a class="neat" >you have a new Like</a></li>
+                        </ul>
+                    </div>
+                </button>
+            </li>
+        </ul>
+
+       </div>
+
+
+    <div class="products-wrapper">
+
+        
+        <div class="right">
+            <div class="product-item" [routerLink]="['/dashboard', 'products', 'details']">
+                <div class="header-container">
+                    <img src="https://i2.wp.com/storage.googleapis.com/knawat-suppliers-img/bebismoda/102682BM1001-371/biyikli-gri-3-l_1593814132152.jpg?w=400" alt="">
+                </div>
+                <div class="body-container">
+                    <div class="product-title">
+                       <strong> Baby Boy's Printed Grey 3 Pieces Outfit Set</strong>
+                    </div>
+                    <div class="product-info">
+                        <div class="info-container">
+                            <div class="title">Cost Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Retail Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Stock</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Imported</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-container">
+                    <button class="Button Button--success Button--bordered">STD</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="header-container">
+                    <img src="https://i2.wp.com/storage.googleapis.com/knawat-suppliers-img/bebismoda/102682BM1001-371/biyikli-gri-3-l_1593814132152.jpg?w=400" alt="">
+                </div>
+                <div class="body-container">
+                    <div class="product-title">
+                       <strong> Baby Boy's Printed Grey 3 Pieces Outfit Set</strong>
+                    </div>
+                    <div class="product-info">
+                        <div class="info-container">
+                            <div class="title">Cost Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Retail Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Stock</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Imported</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-container">
+                    <button class="Button Button--success Button--bordered">STD</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="header-container">
+                    <img src="https://i2.wp.com/storage.googleapis.com/knawat-suppliers-img/bebismoda/102682BM1001-371/biyikli-gri-3-l_1593814132152.jpg?w=400" alt="">
+                </div>
+                <div class="body-container">
+                    <div class="product-title">
+                       <strong> Baby Boy's Printed Grey 3 Pieces Outfit Set</strong>
+                    </div>
+                    <div class="product-info">
+                        <div class="info-container">
+                            <div class="title">Cost Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Retail Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Stock</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Imported</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-container">
+                    <button class="Button Button--success Button--bordered">STD</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="header-container">
+                    <img src="https://i2.wp.com/storage.googleapis.com/knawat-suppliers-img/bebismoda/102682BM1001-371/biyikli-gri-3-l_1593814132152.jpg?w=400" alt="">
+                </div>
+                <div class="body-container">
+                    <div class="product-title">
+                       <strong> Baby Boy's Printed Grey 3 Pieces Outfit Set</strong>
+                    </div>
+                    <div class="product-info">
+                        <div class="info-container">
+                            <div class="title">Cost Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Retail Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Stock</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Imported</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-container">
+                    <button class="Button Button--success Button--bordered">STD</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="header-container">
+                    <img src="https://i2.wp.com/storage.googleapis.com/knawat-suppliers-img/bebismoda/102682BM1001-371/biyikli-gri-3-l_1593814132152.jpg?w=400" alt="">
+                </div>
+                <div class="body-container">
+                    <div class="product-title">
+                       <strong> Baby Boy's Printed Grey 3 Pieces Outfit Set</strong>
+                    </div>
+                    <div class="product-info">
+                        <div class="info-container">
+                            <div class="title">Cost Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Retail Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Stock</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Imported</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-container">
+                    <button class="Button Button--success Button--bordered">STD</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="header-container">
+                    <img src="https://i2.wp.com/storage.googleapis.com/knawat-suppliers-img/bebismoda/102682BM1001-371/biyikli-gri-3-l_1593814132152.jpg?w=400" alt="">
+                </div>
+                <div class="body-container">
+                    <div class="product-title">
+                       <strong> Baby Boy's Printed Grey 3 Pieces Outfit Set</strong>
+                    </div>
+                    <div class="product-info">
+                        <div class="info-container">
+                            <div class="title">Cost Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Retail Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Stock</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Imported</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-container">
+                    <button class="Button Button--success Button--bordered">STD</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="header-container">
+                    <img src="https://i2.wp.com/storage.googleapis.com/knawat-suppliers-img/bebismoda/102682BM1001-371/biyikli-gri-3-l_1593814132152.jpg?w=400" alt="">
+                </div>
+                <div class="body-container">
+                    <div class="product-title">
+                       <strong> Baby Boy's Printed Grey 3 Pieces Outfit Set</strong>
+                    </div>
+                    <div class="product-info">
+                        <div class="info-container">
+                            <div class="title">Cost Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Retail Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Stock</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Imported</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-container">
+                    <button class="Button Button--success Button--bordered">STD</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="header-container">
+                    <img src="https://i2.wp.com/storage.googleapis.com/knawat-suppliers-img/bebismoda/102682BM1001-371/biyikli-gri-3-l_1593814132152.jpg?w=400" alt="">
+                </div>
+                <div class="body-container">
+                    <div class="product-title">
+                       <strong> Baby Boy's Printed Grey 3 Pieces Outfit Set</strong>
+                    </div>
+                    <div class="product-info">
+                        <div class="info-container">
+                            <div class="title">Cost Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Retail Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Stock</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Imported</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-container">
+                    <button class="Button Button--success Button--bordered">STD</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="header-container">
+                    <img src="https://i2.wp.com/storage.googleapis.com/knawat-suppliers-img/bebismoda/102682BM1001-371/biyikli-gri-3-l_1593814132152.jpg?w=400" alt="">
+                </div>
+                <div class="body-container">
+                    <div class="product-title">
+                       <strong> Baby Boy's Printed Grey 3 Pieces Outfit Set</strong>
+                    </div>
+                    <div class="product-info">
+                        <div class="info-container">
+                            <div class="title">Cost Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Retail Price</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Stock</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                        <div class="info-container">
+                            <div class="title">Imported</div>
+                            <div class="quantity">1000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-container">
+                    <button class="Button Button--success Button--bordered">STD</button>
+                </div>
+            </div>
+        </div>    
+        
+    </div>
+
+    
+    
+    
+
+
+
+</div>
+

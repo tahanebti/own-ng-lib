@@ -8,16 +8,24 @@ import { SharedModule } from './shared/shared.module';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AlertModule, CardModule, ToasterModule, ToggleSwitchModule } from 'projects/lib/src/lib';
+import { AlertModule, CardModule, MultiSelectModule, PopoverModule, ToasterModule, ToggleSwitchModule } from 'projects/lib/src/lib';
 import { ProgressBarModule } from 'projects/lib/src/public-api';
-import { HomeModule } from './pages/home/home.module';
-
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { AccountsModule } from './pages/accounts/accounts.module';
+import { SettingsModule } from './pages/settings/settings.module';
+import { UsersModule } from './users/users.module';
+import { DashboardModule } from './pages/dashboard/dashboard.module';
+import { AuthModule } from './auth/auth.module';
+
+
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,14 +35,18 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     ReactiveFormsModule,
     CoreModule,
     SharedModule,
-    HomeModule,
-    AlertModule,
+    AuthModule,
+    DashboardModule,
+    AccountsModule,
+    SettingsModule,
+    UsersModule,
     ProgressBarModule,
     CardModule,
-    ToasterModule,
-    ToggleSwitchModule,
-    DragDropModule
+    DragDropModule,
+   
+  
   ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

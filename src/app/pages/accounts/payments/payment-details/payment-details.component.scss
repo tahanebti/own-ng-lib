@@ -1,0 +1,61 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.breadcrumb{
+    margin: 10px 0 10px 0;
+}
+
+
+
+
+
+.page-layout__content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #f6f6f9;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+    margin: 10px;
+   
+}
+
+
+.panel {
+    background: #fff;
+    box-shadow: 0 0 1px rgba(143,144,165,0.7), 0 0 10px rgba(143,144,165,0.2);
+    border-radius: 0;
+    padding: 20px;
+}
+
+
+
+.page-layout__content-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 32px;
+    min-height: calc(100% - 68px);
+}
+
+
+.item-catalog__wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.card-row{
+    display: flex;
+    justify-content: space-between;
+}

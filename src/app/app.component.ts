@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OverlayLoaderStyle, SpinnerSize } from 'lib';
 import { ProgressBarFill } from 'projects/lib/src/lib';
 import { DashboardLayoutConfiguration } from './core/layouts/dashboard-layout/models/dashboard-layout-config';
 import { SidePanelPosition } from './core/layouts/dashboard-layout/models/side-panel-positon.enum';
@@ -14,6 +15,9 @@ export class AppComponent {
   public configuration: DashboardLayoutConfiguration;
   public menus: NavigationLink[] 
   public progressFill: ProgressBarFill = ProgressBarFill.INFO;
+
+  public overlayStyle: OverlayLoaderStyle = OverlayLoaderStyle.DIM_DARK;
+  public spinnerSize: SpinnerSize = SpinnerSize.SMALL
   
   constructor() {
     this.configuration = new DashboardLayoutConfiguration(
@@ -26,37 +30,66 @@ export class AppComponent {
   private createLinks() {
     this.menus = [
     { 
-      text: 'Home',
+      text: 'Main',
       url:  'home',
-      iconClass: 'fa fa-home',
-      active: true,
+      active: false,
+      menuTitle: false
     },
     { 
-      text: 'Layout',
-      url:  'dashboard',
-      iconClass: 'fa fa-code',
+      text: 'Products Catalog',
+      url:  'products/all',
+      iconClass: 'fa fa-cart-arrow-down',
+      active: false,
+   
+    },
+
+    { 
+      text: 'Directory',
+      iconClass: 'fa fa-suitcase',
       active: false,
       submenu: [
-        { name: 'HTML', url: '#' },
-        { name: 'CSS', url: '#' },
-        { name: 'Javascript', url: '#' }
+        { name: 'Categories', url: 'categories' },
+        { name: 'Products', url: 'products/all' }
+      ]
+    },
+
+    { 
+      text: 'Customers',
+      url:  'customers/all',
+      iconClass: 'fas fa-user-friends',
+      active: false,
+    
+    },
+    { 
+      text: 'Suppliers',
+      url:  'suppliers/all',
+      iconClass: 'fas fa-box',
+      active: false,
+    
+    },
+  
+    { 
+      text: 'Hr',
+      url:  'home',
+      active: false,
+    },
+    { 
+      text: 'Sale',
+      iconClass: 'far fa-credit-card',
+      active: false,
+      submenu: [
+        { name: 'Estimates', url: 'accounts/estimates' },
+        { name: 'Invoices', url: 'accounts/invoices' },
+        { name: 'Payments', url: 'accounts/payments' },
+        { name: 'Expenses', url: '#' },
+        { name: 'Provident Fund', url: '#' },
+        { name: 'Taxes', url: '#' },
       ]
     },
     { 
-      text: 'Forms',
-      url:  'dashboard',
-      iconClass: 'fa fa-mobile',
-      active: false,
-      submenu: [
-        { name: 'Tablets', url: '#' },
-        { name: 'Mobiles', url: '#' },
-        { name: 'Desktop', url: '#' }
-      ]
-    },
-    { 
-      text: 'UI Feateras',
+      text: 'Payroll',
       url:  '',
-      iconClass: 'fa fa-globe',
+      iconClass: 'fas fa-money-check-alt',
       active: false,
       submenu: [
         { name: 'Chrome', url: '#' },
@@ -65,92 +98,47 @@ export class AppComponent {
       ]
     },
     { 
-      text: 'Modal Overlay',
+      text: 'Purchase',
       url:  '',
-      iconClass: 'fa fa-globe',
+      iconClass: 'fas fa-shopping-cart',
       active: false,
       submenu: [
-        { name: 'Chrome', url: '#' },
-        { name: 'Firefox', url: '#' },
-        { name: 'Desktop', url: '#' }
+        { name: 'Supplier Order', url: '#' },
+        { name: 'Supplier Delivery note', url: '#' },
+        { name: 'Supplier invoices', url: '#' }
       ]
     },
     { 
-      text: 'Extrats Components',
+      text: 'Accounts',
       url:  '',
-      iconClass: 'fa fa-globe',
+      iconClass: 'fab fa-cc-amazon-pay',
       active: false,
       submenu: [
-        { name: 'Chrome', url: '#' },
-        { name: 'Firefox', url: '#' },
-        { name: 'Desktop', url: '#' }
+        { name: 'Cache Management', url: '#' },
+        { name: 'Bank Account', url: '#' },
+        { name: 'Balance customer', url: '#' },
+        { name: 'Balance supplier', url: '#' },
       ]
     },
+   
     { 
-      text: 'Maps',
-      url:  '',
+      text: 'Reports',
+
       iconClass: 'fa fa-globe',
       active: false,
-      submenu: [
-        { name: 'Chrome', url: '#' },
-        { name: 'Firefox', url: '#' },
-        { name: 'Desktop', url: '#' }
-      ]
+     
     },
     { 
-      text: 'Charts',
-      url:  '',
-      iconClass: 'fa fa-globe',
+      text: 'Administration',
+      url:  'home',
       active: false,
-      submenu: [
-        { name: 'Chrome', url: '#' },
-        { name: 'Firefox', url: '#' },
-        { name: 'Desktop', url: '#' }
-      ]
     },
     { 
-      text: 'Editors',
-      url:  '',
+      text: 'Setting',
+      url:  'users',
       iconClass: 'fa fa-globe',
       active: false,
-      submenu: [
-        { name: 'Chrome', url: '#' },
-        { name: 'Firefox', url: '#' },
-        { name: 'Desktop', url: '#' }
-      ]
-    },
-    { 
-      text: 'Tables & data',
-      url:  '',
-      iconClass: 'fa fa-globe',
-      active: false,
-      submenu: [
-        { name: 'Chrome', url: '#' },
-        { name: 'Firefox', url: '#' },
-        { name: 'Desktop', url: '#' }
-      ]
-    },
-    { 
-      text: 'Miscellaneous',
-      url:  '',
-      iconClass: 'fa fa-globe',
-      active: false,
-      submenu: [
-        { name: 'Chrome', url: '#' },
-        { name: 'Firefox', url: '#' },
-        { name: 'Desktop', url: '#' }
-      ]
-    },
-    { 
-      text: 'Auth',
-      url:  '',
-      iconClass: 'fa fa-globe',
-      active: false,
-      submenu: [
-        { name: 'Chrome', url: '#' },
-        { name: 'Firefox', url: '#' },
-        { name: 'Desktop', url: '#' }
-      ]
+     
     },
   ];
   }

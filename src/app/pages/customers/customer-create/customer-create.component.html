@@ -1,0 +1,574 @@
+<div class="page-container">
+    <div class="container">
+        <div class="title">
+            <h1>Add New Customer</h1>
+        </div>
+        <!-- <div class="action">
+            
+            <button class="Button Button--success Button--bordered" [routerLink]="['/customers', 'new']">Create New Customer</button>
+        </div> -->
+       
+    </div>
+
+  
+
+
+    <div class="page-layout__content">
+        <div class="page-layout__content-container">
+            <div class="panel">
+               <div class="item-catalog__wrapper">
+                <tn-tabset customNavClass="nav-test-class" customTabsClass="container">
+                    <tn-tab tabTitle="Individual" [bypassDOM]="true">
+                        <ng-template>
+
+                            <div class="customer__card">
+                                <h3>Customer Information</h3>
+                                <div class="form-group-row">
+                                    <div class="form-group">
+                                        <label class="label-title">FirstName *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+        
+                                    <div class="form-group">
+                                        <label class="label-title">LastName *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+    
+                                
+                                </div>
+                                <div class="form-group-row">
+                        
+                                    <div class="form-group">
+                                        <label class="label-title">Email *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="label-title">Unique Identifier *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+
+                                </div>
+
+                                
+                            </div>
+
+                          
+                    
+                            <hr>
+
+                            <div class="customer__card">
+                                <h3>Customer Phone : </h3>
+                                <div class="form-group-row">
+                                    <div class="form-group">
+                                        <label for="">Mobile Phone</label>
+                                        <div class="phone-form-group">
+                                            <input type="text" formControlName="qty" class="SearchBox__input" placeholder="(+216) 55-426-041">
+                                
+                                            <button type="button" (click)="addQuantity()" class="Button Button--success">
+                                                <i class="fa fa-plus plus"></i>
+                                            </button>
+                                        </div>
+                                      
+                                    </div>
+
+                                </div>
+                                
+                                
+                                
+                                <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+                                      
+                                    <div class="form-group-row"  formArrayName="quantities">
+                                    
+                                      <div class="form-group"  *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">
+                                   
+                                            <label for="">Phone Number {{i}}</label>
+                                            <div class="phone-form-group">
+                                                <input type="text" formControlName="qty" class="SearchBox__input">
+                                                <button (click)="removeQuantity(i)" class="Button Button--error Button--bordered">
+                                                    <i class="delete-phone fa fa-trash delete-icon"></i>
+                                                </button>
+                                            </div>
+                                 
+                                    </div>
+                                    </div>
+
+                                    
+                                  </form>
+                                    
+                            
+                                 
+                                 
+
+
+                            </div>
+
+                            <hr>
+
+                            <div class="customer__card">
+                                <h3>Customer Address : </h3>
+
+                                <div class="form-group-row">
+                                    <div class="form-group">
+                                        <label class="label-title">Street 1 *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+    
+                                    <div class="form-group">
+                                        <label class="label-title">Street 2 *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+                                 
+                                </div>
+
+                                <div class="select__wrapper">
+                                    <div class="select">
+                                        <div class="label-select"><label for="">Country *</label>
+                                          <div class="select-wrapper">
+                                            <select id="mySelect" name="" class="category-select"  >
+                                              <option value="">Select Your Country</option>
+                                              <option  *ngFor="let country of countries" >{{country.name}}</option>
+                                              
+                                            </select>
+                                            <div class="icon-select">
+                                              <svg width="16px" height="16px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                                                  fill-rule="evenodd">
+                                                  <path class="rui-u_VZV"
+                                                    d="M512 601.6l-268.8-264.533h-72.533v72.533l341.333 341.333 341.333-341.333v-72.533h-72.533l-268.8 264.533z">
+                                                  </path>
+                                                </svg>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div> 
+
+                                      <div class="select">
+                                        <div class="label-select"><label for="">Region *</label>
+                                          <div class="select-wrapper">
+                                            <select id="mySelect" name="" class="category-select"  >
+                                              <option value="">Select Your Region</option>
+                                              <option>Ariana</option>
+                                              <option>Beja</option>
+                                              <option>Ben Arouss</option>
+                                              <option>Bizerte</option> 
+                                              <option>Gafsa</option>
+                                              <option>Gabes</option>
+                                              <option>Jendouba</option>
+                                              <option>Kairouan</option>
+                                              <option>Kaisserine</option>
+                                              <option>keblli</option>
+                                              <option>Kef</option>
+                                              <option>Mahdia</option>
+                                              <option>Manouba</option>
+                                              <option>Medenine</option>
+                                              <option>Monastire</option>
+                                              <option>Nabeul</option>
+                                              <option>Sfax</option>
+                                              <option>Sidi Bouzid</option>
+                                              <option>Siliana</option>
+                                              <option>Sousse</option>
+                                              <option>Tataouine</option>
+                                              <option>Tunis</option>
+                                              <option>Zagouan</option>
+                                            </select>
+                                            <div class="icon-select">
+                                              <svg width="16px" height="16px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                                                  fill-rule="evenodd">
+                                                  <path class="rui-u_VZV"
+                                                    d="M512 601.6l-268.8-264.533h-72.533v72.533l341.333 341.333 341.333-341.333v-72.533h-72.533l-268.8 264.533z">
+                                                  </path>
+                                                </svg>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div> 
+    
+                                      <div class="select">
+                                        <div class="label-select"><label for="">Delegation *</label>
+                                          <div class="select-wrapper">
+                                            <select id="mySelect" name="" class="category-select"  >
+                                              <option value="">Select Your delegation</option>
+                                              <option *ngFor="let region of regionDelegation"  >{{region.delegation}}</option>
+                                       
+                                            </select>
+                                            <div class="icon-select">
+                                              <svg width="16px" height="16px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                                                  fill-rule="evenodd">
+                                                  <path class="rui-u_VZV"
+                                                    d="M512 601.6l-268.8-264.533h-72.533v72.533l341.333 341.333 341.333-341.333v-72.533h-72.533l-268.8 264.533z">
+                                                  </path>
+                                                </svg>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div> 
+
+                                      
+                                </div>
+                             
+                                
+                                <div class="t-form-group">
+                                    <label class="label-title">Address *</label>
+                                   <textarea class="TextArea" name="" id="" cols="30" rows="10"></textarea>
+                                </div>
+                                    
+                            
+                                 
+                                 
+
+
+                            </div>
+                          
+                            <hr>
+
+                            <div class="customer__card">
+                                <h3>Other Information : </h3>
+
+                                <div class="form-group-row">
+                                    <div class="form-group">
+                                        <label class="label-title">Authorized outstandings *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+        
+                                    <div class="form-group">
+                                        <label class="label-title">Price list *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+    
+                                  
+
+                                    
+                                </div>
+
+                                <div class="form-group-row">
+                                    <div class="form-group">
+                                        <label class="label-title">Payment deadline *</label>
+                                        <input type="number" class="SearchBox__input">
+                                    </div>
+        
+                                      <div class="form-group">
+                                         <div class="select" style="width: 100%; transform: translateY(-38px);">
+                                        <div class="label-select"><label for="">Region *</label>
+                                          <div class="select-wrapper">
+                                            <select id="mySelect" name="" class="category-select"  >
+                                              <option value="">Select Your Region</option>
+                                              <option>wholesale price</option>
+                                              <option>promotional price</option>
+                                          
+                                            </select>
+                                            <div class="icon-select">
+                                              <svg width="16px" height="16px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                                                  fill-rule="evenodd">
+                                                  <path class="rui-u_VZV"
+                                                    d="M512 601.6l-268.8-264.533h-72.533v72.533l341.333 341.333 341.333-341.333v-72.533h-72.533l-268.8 264.533z">
+                                                  </path>
+                                                </svg>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div> 
+                                    </div>
+                                  </div>
+
+
+                            </div>
+
+                            <hr>
+
+                            <div class="btn__wrapper">
+                                <button class="Button Button--default">Save</button>
+                                <button class="Button Button--success">Save</button>
+                            </div>
+
+                        </ng-template>
+                    </tn-tab>
+                    <tn-tab tabTitle=" Professional  " [bypassDOM]="true">
+                        <ng-template>
+
+                            <div class="customer__card">
+                                <h3>Customer Information</h3>
+                                <div class="form-group-row">
+                                    <div class="form-group">
+                                        <label class="label-title">FirstName *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+        
+                                    <div class="form-group">
+                                        <label class="label-title">LastName *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+    
+                                
+                                </div>
+                                <div class="form-group-row">
+                        
+                                    <div class="form-group">
+                                        <label class="label-title">Email *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="label-title">WebSite *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+
+                                </div>
+                        
+                                <div class="form-group-row">
+                        
+                                    <div class="form-group">
+                                        <label class="label-title">Company name *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="label-title">Tax Number (Unique Identifier) *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="label-title">Trade Register  (Unique Identifier) *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+
+                                </div>
+                              
+                            </div>
+
+                          
+                    
+                            <hr>
+
+                            <div class="customer__card">
+                                <h3>Customer Phone : </h3>
+                                <div class="form-group-row">
+                                    <div class="form-group">
+                                        <label for="">Mobile Phone</label>
+                                        <div class="phone-form-group">
+                                            <input type="text" formControlName="qty" class="SearchBox__input" placeholder="(+216) 55-426-041">
+                                
+                                            <button type="button" (click)="addQuantity()" class="Button Button--success">
+                                                <i class="fa fa-plus plus"></i>
+                                            </button>
+                                        </div>
+                                      
+                                    </div>
+
+                                </div>
+                                
+                                
+                                
+                                <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+                                      
+                                    <div class="form-group-row"  formArrayName="quantities">
+                                    
+                                      <div class="form-group"  *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">
+                                   
+                                            <label for="">Phone Number {{i}}</label>
+                                            <div class="phone-form-group">
+                                                <input type="text" formControlName="qty" class="SearchBox__input">
+                                                <button (click)="removeQuantity(i)" class="Button Button--error Button--bordered">
+                                                    <i class="delete-phone fa fa-trash delete-icon"></i>
+                                                </button>
+                                            </div>
+                                 
+                                    </div>
+                                    </div>
+
+                                    
+                                  </form>
+                                    
+                            
+                                 
+                                 
+
+
+                            </div>
+
+                            <hr>
+
+                            <div class="customer__card">
+                                <h3>Customer Address : </h3>
+
+                                <div class="form-group-row">
+                                    <div class="form-group">
+                                        <label class="label-title">Street 1 *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+    
+                                    <div class="form-group">
+                                        <label class="label-title">Street 2 *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+                                 
+                                </div>
+
+                                <div class="select__wrapper">
+                                    <div class="select">
+                                        <div class="label-select"><label for="">Country *</label>
+                                          <div class="select-wrapper">
+                                            <select id="mySelect" name="" class="category-select"  >
+                                              <option value="">Select Your Country</option>
+                                              <option  *ngFor="let country of countries" >{{country.name}}</option>
+                                              
+                                            </select>
+                                            <div class="icon-select">
+                                              <svg width="16px" height="16px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                                                  fill-rule="evenodd">
+                                                  <path class="rui-u_VZV"
+                                                    d="M512 601.6l-268.8-264.533h-72.533v72.533l341.333 341.333 341.333-341.333v-72.533h-72.533l-268.8 264.533z">
+                                                  </path>
+                                                </svg>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div> 
+
+                                      <div class="select">
+                                        <div class="label-select"><label for="">Region *</label>
+                                          <div class="select-wrapper">
+                                            <select id="mySelect" name="" class="category-select"  >
+                                              <option value="">Select Your Region</option>
+                                              <option>Ariana</option>
+                                              <option>Beja</option>
+                                              <option>Ben Arouss</option>
+                                              <option>Bizerte</option> 
+                                              <option>Gafsa</option>
+                                              <option>Gabes</option>
+                                              <option>Jendouba</option>
+                                              <option>Kairouan</option>
+                                              <option>Kaisserine</option>
+                                              <option>keblli</option>
+                                              <option>Kef</option>
+                                              <option>Mahdia</option>
+                                              <option>Manouba</option>
+                                              <option>Medenine</option>
+                                              <option>Monastire</option>
+                                              <option>Nabeul</option>
+                                              <option>Sfax</option>
+                                              <option>Sidi Bouzid</option>
+                                              <option>Siliana</option>
+                                              <option>Sousse</option>
+                                              <option>Tataouine</option>
+                                              <option>Tunis</option>
+                                              <option>Zagouan</option>
+                                            </select>
+                                            <div class="icon-select">
+                                              <svg width="16px" height="16px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                                                  fill-rule="evenodd">
+                                                  <path class="rui-u_VZV"
+                                                    d="M512 601.6l-268.8-264.533h-72.533v72.533l341.333 341.333 341.333-341.333v-72.533h-72.533l-268.8 264.533z">
+                                                  </path>
+                                                </svg>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div> 
+    
+                                      <div class="select">
+                                        <div class="label-select"><label for="">Delegation *</label>
+                                          <div class="select-wrapper">
+                                            <select id="mySelect" name="" class="category-select"  >
+                                              <option value="">Select Your delegation</option>
+                                              <option *ngFor="let region of regionDelegation"  >{{region.delegation}}</option>
+                                       
+                                            </select>
+                                            <div class="icon-select">
+                                              <svg width="16px" height="16px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                                                  fill-rule="evenodd">
+                                                  <path class="rui-u_VZV"
+                                                    d="M512 601.6l-268.8-264.533h-72.533v72.533l341.333 341.333 341.333-341.333v-72.533h-72.533l-268.8 264.533z">
+                                                  </path>
+                                                </svg>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div> 
+
+                                      
+                                </div>
+                             
+                                
+                                <div class="t-form-group">
+                                    <label class="label-title">Address *</label>
+                                   <textarea class="TextArea" name="" id="" cols="30" rows="10"></textarea>
+                                </div>
+                                    
+                            
+                                 
+                                 
+
+
+                            </div>
+                          
+                            <hr>
+
+                            <div class="customer__card">
+                                <h3>Other Information : </h3>
+
+                                <div class="form-group-row">
+                                    <div class="form-group">
+                                        <label class="label-title">Authorized outstandings *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+        
+                                    <div class="form-group">
+                                        <label class="label-title">Price list *</label>
+                                        <input type="text" class="SearchBox__input">
+                                    </div>
+    
+                                  
+
+                                    
+                                </div>
+
+                                <div class="form-group-row">
+                                    <div class="form-group">
+                                        <label class="label-title">Payment deadline *</label>
+                                        <input type="number" class="SearchBox__input">
+                                    </div>
+        
+                                      <div class="form-group">
+                                         <div class="select" style="width: 100%; transform: translateY(-38px);">
+                                        <div class="label-select"><label for="">Region *</label>
+                                          <div class="select-wrapper">
+                                            <select id="mySelect" name="" class="category-select"  >
+                                              <option value="">Select Your Region</option>
+                                              <option>wholesale price</option>
+                                              <option>promotional price</option>
+                                          
+                                            </select>
+                                            <div class="icon-select">
+                                              <svg width="16px" height="16px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                                                  fill-rule="evenodd">
+                                                  <path class="rui-u_VZV"
+                                                    d="M512 601.6l-268.8-264.533h-72.533v72.533l341.333 341.333 341.333-341.333v-72.533h-72.533l-268.8 264.533z">
+                                                  </path>
+                                                </svg>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div> 
+                                    </div>
+                                  </div>
+
+
+                            </div>
+
+                            <hr>
+
+                            <div class="btn__wrapper">
+                                <button class="Button Button--default">Cancel</button>
+                                <button class="Button Button--success" (click)="onSubmit()">Save</button>
+                            </div>
+
+                        </ng-template>
+                      </tn-tab>
+                     
+                    </tn-tabset>
+               </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,73 @@
+<div class="account-page">
+
+
+    <div class="container">
+        <div class="account-logo">
+            SadarLy Inc
+        </div>
+        <div class="account-box">
+            <div class="account-wrapper">
+                   <alert></alert>
+                <form [formGroup]="myForm" (ngSubmit)="springLogin(myForm)" autocomplete="off">
+               
+                    <div class="form-group form-focus"><label
+                            class="control-label">Username or Email</label>
+                            <input
+                            class="SearchBox__input" type="text"
+                            [formControl]="myForm.controls['usernameOrEmail']" placeholder="email"
+                            [ngClass]="{ 'is-invalid': submitted && f.usernameOrEmail.errors }"
+                            >
+                            <div *ngIf="submitted && f.usernameOrEmail.errors" class="invalid-feedback">Email or username are required</div>
+                           
+                        </div>
+                    
+                    <!-- <div *ngIf="email.invalid && email.dirty" class="alert alert-success">
+                        <strong>{{ email.value }}</strong> is valid email
+                      </div>
+                    
+                      <div *ngIf="email.valid"class="alert alert-danger">
+                        this email does not exist in our system
+                      </div>
+                    
+                      <div *ngIf="email.pending" class="alert alert-warning">
+                        The email address is badly formatted
+                      </div> -->
+    
+                    <div class="form-group form-focus"><label
+                            class="control-label">Password</label>
+                            
+                            <input class="SearchBox__input"
+                            type="password" id="myInput" type="password" [formControl]="myForm.controls['password']" placeholder="email" 
+                            placeholder="Mot de passe"
+                            [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                            >
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">Password is required</div>
+                                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                            </div>
+                        
+                    </div>
+                  
+    
+     
+                    <div class="form-group text-center"><button
+                            class="Button Button--success" 
+                            tabindex="0">
+                            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" style="width: 29px;" />      
+                            <span *ngIf="!loading">Login</span>
+                        
+                        </button>
+                    </div>
+                
+                    <div ><a [routerLink]="['/forgot-password']">Forgot your password?</a></div>
+                </form>
+    
+                
+    
+                <div class="text-center signIn">
+                    <span>Not a member? <span class="  redirect" [routerLink]="['/register']"> Sign in</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>

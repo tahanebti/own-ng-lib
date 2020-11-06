@@ -1,0 +1,31 @@
+<div class="category-navbar">
+    <div class="navbar-container">
+        <ul>
+            <li class="nav-item " >
+                <a class="nav-link" 
+                
+                tnConfirmationPopover
+                [popoverTitle]="popoverTitle"
+                [popoverMessage]="popoverMessage"
+                placement="left"
+                (confirm)="confirmClicked = true"
+                (cancel)="cancelClicked = true"
+                
+                >
+                  <i class="fas fa-file-contract"></i>
+                </a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" (click)="onCreateNewCalendarEvent()">
+                  <i class="far fa-calendar-plus"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="onSearchTopics()">
+                  <i class="fas fa-search"></i>
+                </a>
+              </li>
+        </ul>
+    </div>
+</div>
+

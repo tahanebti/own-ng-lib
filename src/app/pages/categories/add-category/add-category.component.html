@@ -1,0 +1,32 @@
+<h3 class="text-right">Create Sector</h3>
+
+<hr>
+
+<form [formGroup]="myForm" (ngSubmit)="OnSubmit()">
+      <div class="form_group">
+        <label for="fname">Category name:</label>
+        <input type="text" id="fname" name="fname" class="SearchBox__input">
+      </div>
+      <div class="form_group">
+        <label for="fname">Departement:</label>
+        <input type="text" id="fname" name="fname" class="SearchBox__input">
+      </div>
+
+
+      <div class="form_group">
+        <label for="fname">Select Company:</label>
+        <tn-multi-select
+          name="city"
+          [placeholder]="'Select Company'"
+          [data]="cities"
+          formControlName="city"
+          [disabled]="disabled"
+          [settings]="dropdownSettings"
+          (onSelect)="onItemSelect($event)">
+      </tn-multi-select>
+</div>
+
+      
+
+    <button class="Button Button--success Button--bordered " >Add</button>
+  </form>

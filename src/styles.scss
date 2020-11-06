@@ -3,6 +3,11 @@
 
 @import './projects/lib/src/lib/components/_shared/scss/variables';
 
+
+
+@import 'ag-grid-community/dist/styles/ag-grid.css';
+@import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
+
 $background: #F6F6F8;
 $font-color: #FFFF;
 
@@ -14,7 +19,7 @@ html, body, ul, p, h1, h2, h3, h4, h5, h6, blockquote {
 }
 
 html {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 body {
@@ -22,7 +27,7 @@ body {
 }
 
 a {
-  color: $font-color;
+
   font-weight: 400;
   text-decoration: none;
 }
@@ -58,6 +63,20 @@ h1 {
     cursor: pointer;
   }
 }
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+
+
+.text-right{
+  text-align: right;
+}
+
+
 
 .btn {
   padding: 1rem 1.5rem;
@@ -118,3 +137,180 @@ h1 {
 
 
 
+
+.breadcrumb{
+  margin: 10px 0 10px 0;
+}
+
+
+
+
+.Button {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px transparent;
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+  transition: 0.2s ease-out;
+  transition-property: background-color, box-shadow, filter;
+  line-height: 1.6;
+  transform: translateZ(0);
+}
+.Button--success {
+  background-color: #30c084;
+  color: #fff;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+.Button--success.Button--bordered {
+  background-color: #fff;
+  border-color: #30c084;
+  color: #30c084;
+}
+.Button--error {
+  background-color: #e52e4d;
+  color: #fff;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+.Button--error.Button--bordered {
+  background-color: #fff;
+  border-color: #e52e4d;
+  color: #e52e4d;
+}
+.Button--warning {
+  background-color: #e9ba55;
+  color: #fff;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+.Button--warning.Button--bordered {
+  background-color: #fff;
+  border-color: #e9ba55;
+  color: #e9ba55;
+}
+.Button--default {
+  background-color: #f7faff;
+  border-color: #e1e8f2;
+  box-shadow: 0 2px 6px transparent;
+  color: #7a8799;
+}
+.Button--default.Button--bordered {
+  background-color: #fff;
+  border-color: #e1e8f2;
+  color: #7a8799;
+}
+.Button--link {
+  background-color: initial;
+  border: 0;
+  color: #0173ad;
+  font-size: inherit;
+  font-weight: inherit;
+  box-shadow: none;
+  text-shadow: none;
+  text-align: inherit;
+  padding: 0;
+}
+.Button--link:focus,
+.Button--link:hover {
+  filter: none !important;
+  text-decoration: underline;
+  box-shadow: none !important;
+}
+.Button--link.Button--disabled {
+  background-color: initial !important;
+}
+.Button--text {
+  background-color: initial;
+  border: 0;
+  color: #7a8799;
+  font-size: inherit;
+  font-weight: inherit;
+  box-shadow: none;
+  text-shadow: none;
+  text-align: inherit;
+  padding: 0.25rem 0.5rem;
+}
+.Button--text:focus,
+.Button--text:hover {
+  filter: none !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: none !important;
+}
+.Button--text.Button--disabled {
+  background-color: initial !important;
+}
+.Button--bordered {
+  text-shadow: none;
+}
+.Button--disabled {
+  background-color: #f2f8ff !important;
+  border-color: hsla(0, 0%, 98%, 0) !important;
+  box-shadow: none;
+  color: #a3afbf !important;
+  cursor: not-allowed;
+  text-shadow: none;
+}
+.Button:not(.Button--disabled):hover {
+  filter: contrast(125%);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.09);
+}
+.Button:not(.Button--disabled):focus {
+  filter: contrast(95%);
+  outline: 2px solid rgba(0, 0, 0, 0.05);
+  outline-offset: -2px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.09);
+}
+
+
+
+
+.SearchBox__input {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #e1e8f2;
+  background: none;
+  padding: 0.75rem 0.75rem 0.75rem 3rem;
+  background-color: white;
+  display: block;
+}
+.SearchBox__input:focus {
+  outline: none;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.09);
+  border-color: #bdcde3;
+}
+.SearchBox__input--fullWidth {
+  width: 100%;
+}
+.SearchBox__searchIcon {
+  color: #7a8799;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+
+
+
+
+.TextArea {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #e1e8f2;
+  padding: 0.5rem 1rem;
+  background: #fff;
+}
+.TextArea:disabled {
+  cursor: not-allowed;
+  background-color: #f7faff;
+}
+.TextArea:disabled::placeholder {
+  color: #a3afbf;
+}
+.TextArea:focus {
+  outline: none;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.09);
+  border-color: #bdcde3;
+}

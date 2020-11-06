@@ -1,0 +1,73 @@
+
+<tn-overlay-side-panel ></tn-overlay-side-panel>
+<div class="page-container">
+    <div class="container">
+        <div class="title">
+            <h1>Customers</h1>
+        </div>
+        <div class="action">
+            
+            <button class="Button Button--success Button--bordered" [routerLink]="['/dashboard', 'customers', 'new']">Create New Customer</button>
+        </div>
+       
+    </div>
+
+<div class="breadcrumb">
+    Dashboard / Customers
+</div>
+
+<div class="navbar">
+    <tn-customer-navbar></tn-customer-navbar>
+</div>
+
+<tn-grid-container>
+    <div tnGridCell gcColSpan="5" gcRowSpan="3" class="card card-body">
+        <div class="container">
+            <input type="text" class="SearchBox__input" placeholder="Search by customer name, company ...">
+            <button class="Button Button--success">Search</button>
+           
+        </div>
+    </div>
+
+    <div tnGridCell gcColSpan="5" gcRowSpan="3" class="card card-body">
+        
+       <tn-tabset customNavClass="nav-test-class" customTabsClass="container">
+        <tn-tab tabTitle="All" >
+            <ag-grid-angular 
+   
+            style="width: 100%; height: 500px;"
+            class="ag-theme-alpine" 
+            [rowData]="rowData" 
+            [columnDefs]="columnDefs"
+            [rowSelection]="'single'"
+            animateRows
+            pagination
+            rowSelection="multiple"
+            [frameworkComponents]="frameworkComponents"
+            >
+        </ag-grid-angular>
+        </tn-tab>
+        <tn-tab tabTitle=" Archives  " [bypassDOM]="true">
+            <ng-template>
+              This is content of the contacts tab
+            </ng-template>
+          </tn-tab>
+          <tn-tab tabTitle=" Deleted"  [disabled]="true">
+            Content of the Map Tab
+          </tn-tab>
+        </tn-tabset>
+
+        
+      
+    </div>
+
+</tn-grid-container>
+
+
+
+
+
+
+
+</div>
+

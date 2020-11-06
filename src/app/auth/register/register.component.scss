@@ -1,0 +1,44 @@
+.container{
+    width: 21%;
+    margin: auto;
+    transform: translate(0%, 30%);
+    background: white;
+    padding: 20px
+}
+
+.account-logo{
+    text-align: center;
+    font-size: 32px;
+    font-family: fantasy;
+}
+.account-logo::first-letter{
+    color: red;
+}
+
+control-label{
+    line-height: 2;
+}
+
+.SearchBox__input {
+    width: 83%;
+}
+
+.form-group{
+    line-height: 3;
+}
+
+.Button{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+.redirect{
+    color: blue;
+    cursor: pointer;
+}

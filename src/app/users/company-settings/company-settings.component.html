@@ -1,0 +1,164 @@
+<div class="page-container">
+    <div class="container">
+        <div class="title">
+            <h1>Company Settings</h1>
+        </div>
+        <!-- <div class="action">
+            
+            <button class="Button Button--success Button--bordered" [routerLink]="['/customers', 'new']">Create New Customer</button>
+        </div> -->
+       
+    </div>
+
+  
+
+
+    <div class="page-layout__content">
+        <div class="page-layout__content-container">
+            <div class="panel">
+               <div class="item-catalog__wrapper">
+
+                <div class="customer__card">
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label class="label-title">Company Name *</label>
+                            <input type="text" class="SearchBox__input" placeholder="Sadarly Inc">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="label-title">Contact Person *</label>
+                            <input type="text" class="SearchBox__input" placeholder="Mariem Nebti">
+                        </div>
+
+                    
+                    </div>
+                    
+
+                    <div class="select__wrapper">
+                        <div class="select">
+                            <div class="label-select"><label for="">Country *</label>
+                              <div class="select-wrapper">
+                                <select id="mySelect" name="" class="category-select"  >
+                                  <option value="">Select Your Country</option>
+                                  <option  *ngFor="let country of countries" >{{country.name}}</option>
+                                  
+                                </select>
+                                <div class="icon-select">
+                                  <svg width="16px" height="16px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                                      fill-rule="evenodd">
+                                      <path class="rui-u_VZV"
+                                        d="M512 601.6l-268.8-264.533h-72.533v72.533l341.333 341.333 341.333-341.333v-72.533h-72.533l-268.8 264.533z">
+                                      </path>
+                                    </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div> 
+
+                          <div class="select">
+                            <div class="label-select"><label for="">Region *</label>
+                              <div class="select-wrapper">
+                                <select id="mySelect" name="" class="category-select"  >
+                                  <option value="">Select Your Region</option>
+                                  <option>Ariana</option>
+                                  <option>Beja</option>
+                                  <option>Ben Arouss</option>
+                                  <option>Bizerte</option> 
+                                  <option>Gafsa</option>
+                                  <option>Gabes</option>
+                                  <option>Jendouba</option>
+                                  <option>Kairouan</option>
+                                  <option>Kaisserine</option>
+                                  <option>keblli</option>
+                                  <option>Kef</option>
+                                  <option>Mahdia</option>
+                                  <option>Manouba</option>
+                                  <option>Medenine</option>
+                                  <option>Monastire</option>
+                                  <option>Nabeul</option>
+                                  <option>Sfax</option>
+                                  <option>Sidi Bouzid</option>
+                                  <option>Siliana</option>
+                                  <option>Sousse</option>
+                                  <option>Tataouine</option>
+                                  <option>Tunis</option>
+                                  <option>Zagouan</option>
+                                </select>
+                                <div class="icon-select">
+                                  <svg width="16px" height="16px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                                      fill-rule="evenodd">
+                                      <path class="rui-u_VZV"
+                                        d="M512 601.6l-268.8-264.533h-72.533v72.533l341.333 341.333 341.333-341.333v-72.533h-72.533l-268.8 264.533z">
+                                      </path>
+                                    </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div> 
+
+                          <div class="select">
+                            <div class="label-select"><label for="">Delegation *</label>
+                              <div class="select-wrapper">
+                                <select id="mySelect" name="" class="category-select"  >
+                                  <option value="">Select Your delegation</option>
+                                  <option *ngFor="let region of regionDelegation"  >{{region.delegation}}</option>
+                           
+                                </select>
+                                <div class="icon-select">
+                                  <svg width="16px" height="16px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                                      fill-rule="evenodd">
+                                      <path class="rui-u_VZV"
+                                        d="M512 601.6l-268.8-264.533h-72.533v72.533l341.333 341.333 341.333-341.333v-72.533h-72.533l-268.8 264.533z">
+                                      </path>
+                                    </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div> 
+
+                          
+                    </div>
+
+
+                    <div class="form-group-row">
+            
+                        <div class="form-group">
+                            <label class="label-title">Email *</label>
+                            <input type="text" class="SearchBox__input" placeholder="mariem@gmail.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="label-title">Phone *</label>
+                            <input type="text" class="SearchBox__input" placeholder="+21655426041">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group-row">
+            
+                        <div class="form-group">
+                            <label class="label-title">Fax *</label>
+                            <input type="text" class="SearchBox__input" placeholder="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="label-title">Website *</label>
+                            <input type="text" class="SearchBox__input" placeholder="http://sadarly.com">
+                        </div>
+
+                    </div>
+
+                    <div class="btn__wrapper">
+                        <button class="Button Button--default ">Reset</button>
+                        <button class="Button Button--success ">Save</button>
+                    </div>
+                    
+                </div>
+
+          
+               </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

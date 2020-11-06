@@ -1,0 +1,47 @@
+.toolbar {
+    margin-top: 72px;  
+  }
+  
+  @media only screen and (max-width: 991px) {
+    .toolbar {
+      margin-top: 61px;
+    }
+
+    .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+  }
+
+
+
+.category-navbar {
+    background-color: #f0f0f0!important;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.nav-link {
+    color: rgba(0,0,0,.5);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    padding: 10px;
+}
+
+li{
+    padding: 0 20px;
+}
+
+.fa, .fas {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+

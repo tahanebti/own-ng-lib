@@ -1,0 +1,16 @@
+<ul class="nav-tabset"
+[class.disable-style]="disableStyle"
+[ngClass]="customNavClass">
+<li *ngFor="let tab of tabs"
+  (click)="selectTab(tab)"
+  class="nav-tab"
+  [class.active]="tab.active"
+  [class.disabled]="tab.disabled">
+<span>{{ tab.tabTitle }}</span>
+<span *ngIf="!!tab.tabSubTitle" class="tab-subtitle">{{ tab.tabSubTitle }}</span>
+</li>
+</ul>
+<div class="tabs-container"
+ [ngClass]="customTabsClass">
+<ng-content></ng-content>
+</div>

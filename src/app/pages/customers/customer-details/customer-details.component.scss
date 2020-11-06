@@ -1,0 +1,188 @@
+
+
+.page-layout__content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #f6f6f9;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+    width: 78%;
+    margin: auto;
+   
+}
+
+
+.panel {
+    background: #fff;
+    box-shadow: 0 0 1px rgba(143,144,165,0.7), 0 0 10px rgba(143,144,165,0.2);
+    border-radius: 0;
+}
+
+
+
+.page-layout__content-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 32px;
+    min-height: calc(100% - 68px);
+}
+
+
+.customer__card{
+    padding: 20px;
+}
+
+
+
+.dateTime__wrapper{
+    display: flex;
+}
+
+
+
+.form-group{
+    margin: 10px;
+    width: 48%;
+}
+
+.phone-form-group{
+    margin: 10px;
+    display: flex;
+}
+
+.btn__wrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.label-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 2.14;
+    color: #222939;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.form-group-row{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.SearchBox__input {
+    width: 85%;
+}    
+
+.phone__wrapper{
+    display: flex;
+}
+
+
+
+
+.label-select{
+    color: #002f34;
+      display: block;
+      font-size: 14px;
+      line-height: 50px;
+  }
+  
+  .label-select label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+  }
+  
+  .category-select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    color: #002f34;
+    display: block;
+    font-size: 16px;
+    height: 48px;
+    box-sizing: border-box;
+    outline: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%;
+  }
+  
+  .icon-select{
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    display: -webkit-flex;
+    display: flex;
+    height: 16px;
+    margin-right: 12px;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .select-wrapper{
+    background: #fff;
+    position: relative;
+    border: 1px solid #e1e8f2;
+    top: -15px;
+    min-width: 200px;
+  }
+
+  .TextArea {
+    width: 96%;
+  }
+
+
+
+
+  .select__wrapper{
+      display: flex;
+  }
+
+  .select{
+    margin: 10px;
+    width: 48%;
+  }
+
+  .t-form-group-row{
+      display: flex;
+  }
+
+  .btn__wrapper{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+
+  Button{
+      margin-right: 10px;
+  }
+
+  .title{
+    text-align: center;
+  }
+
+
+  .cutomer-info__wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .customer-name{
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .income{
+    color: blue;
+  }

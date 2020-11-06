@@ -1,0 +1,337 @@
+.page-container{
+    max-width: 75%;
+    margin: auto;
+}
+
+.SearchBox__input{
+    width: 96%;
+}
+
+.header-container{
+    overflow: hidden;
+}
+
+
+.info-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    list-style: none;
+}
+
+svg{
+    width: 25px;
+}
+
+a {
+    color: brown;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.size-container{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.footer-container .Button{
+    width: 94%;
+    margin: 10px;
+    font-size: 12px;
+}
+
+.breadcrumb{
+    margin: 10px 0 10px 0;
+}
+
+.select-container{
+    display: flex;
+    width: 100%;
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.Search-wrapper{
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+.products-wrapper{
+
+    display: flex;
+}
+
+
+.left{
+    width: 19%;
+    margin-right: 10px;
+    background-color: white;
+    padding: 20px;
+    height: fit-content;
+}
+
+.right{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.product-item{
+    background-color: white;
+    height: fit-content;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 31%;
+}
+
+
+
+
+.page-layout__content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #f6f6f9;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+    margin: 10px;
+   
+}
+
+
+.panel {
+    background: #fff;
+    box-shadow: 0 0 1px rgba(143,144,165,0.7), 0 0 10px rgba(143,144,165,0.2);
+    border-radius: 0;
+}
+
+
+
+.page-layout__content-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 32px;
+    min-height: calc(100% - 68px);
+}
+
+
+.item-catalog__wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+
+
+ul.categories-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li.featured {
+    flex: 1 1 200px;
+    justify-content: center;
+    border-right: 1px solid #e5e5ec;
+    border-bottom: 1px solid #e5e5ec;
+    transition: all 100ms linear;
+    background: white;
+}
+
+
+.featured button{
+    color: #62628d;
+    background-color: rgba(0,0,0,0);
+    background-image: none;
+    outline: none;
+    width: 100%;
+    margin: 0;
+    white-space: pre-wrap;
+    border-radius: 0;
+    color: #272742;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+}
+
+.featured button:hover{
+    background-color: #e5e5ec;
+}
+
+.btn {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    -webkit-text-decoration-line: none;
+    text-decoration-line: none;
+    transition: background-color 0.2s ease-in-out;
+    padding: 6px 12px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    border: 0;
+    border-radius: 3px;
+}
+
+.featured button>svg {
+    flex: 0 1 40px;
+}
+.featured button svg {
+    fill: #62628d !important;
+}
+.btn svg {
+    display: block;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+.icon-lg {
+    height: 40px;
+    width: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.horizontal-filter{
+    display: flex;
+    justify-content: space-between;
+    width: 28%;
+}
+
+
+button{
+    margin: 0px 0.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+
+/* Dropdown specific styles */
+.dropdown  {
+  position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    display: block;
+    align-self: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: 471px;
+    display: none;
+    margin: -0.25rem 0 0 10%;
+    padding: 0.25rem;
+    list-style-type: none;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: 0.2s all ease-in;
+    right: -96px;
+    top: 59px;
+    border: 1px solid #e5e5ec;
+}
+
+.dropdown-menu li {
+  padding: .5rem .5rem;
+}
+
+.dropdown-menu li + li {
+  border-top: 1px solid #e1e1e1;
+  padding-top: .5rem;
+}
+
+.dropdown-menu li > a {
+  display: block;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  transition: .2s background-color ease-in;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.dropdown-menu li > a:hover {
+  background-color: #e9e9e9;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+a.neat {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+
+
+a.neat {
+  color: inherit;
+  text-decoration: none;
+}
+
+.greetings {
+  color: #000;
+}
+
+.center {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.fake-link {
+  cursor: pointer;
+}

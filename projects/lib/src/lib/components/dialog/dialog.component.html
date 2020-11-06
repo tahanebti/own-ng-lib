@@ -1,8 +1,8 @@
-<div  class="overlay-dialog " [class.collapsed]="!isDialogVisible">
+<div   class="overlay-dialog " [class.collapsed]="!isDialogVisible">
     <div class="overlay" [ngClass]="overlayStyle" 
-        *ngIf="isDialogVisible" [@dialog] (click)="close()">
+        *ngIf="isDialogVisible"  (click)="close()">
     </div>
-    <div class="dialog" >
+    <div class="dialog" [@window]="{value: states, params: {transition: transition}}">
       <div class="close">
         <span (click)="close()">&times;</span>
       </div>

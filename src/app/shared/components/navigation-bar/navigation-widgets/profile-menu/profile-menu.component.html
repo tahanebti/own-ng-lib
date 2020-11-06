@@ -1,4 +1,12 @@
-<div class="navigation-profile">
-    <tn-context-menu></tn-context-menu>
-    <div  class="" (click)="showMenu()">Profile</div>
+<div class="dropdown" #myDropdown tnDropdown>
+    <div class="profile-container">
+        <img class="img-fluid" src="assets/images/default-avatar.svg" alt="profile">
+        <span class="fake-link dropdown-toggle greetings" tnDropdownToggle>Profile</span>
+    </div>
+    <ul class="dropdown-menu" tnDropdownMenu>
+      <li><a class="neat" href="/users/profile">Profile</a></li>
+      <li><a class="neat" href="/users/company-settings">Settings</a></li>
+      <li><a class="neat" href="#">Logout</a></li>
+    </ul>
 </div>
+

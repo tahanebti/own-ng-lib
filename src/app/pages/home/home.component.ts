@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { BadgeColor, BadgePosition, BadgeShape, BadgeSize, BadgeStyle, ButtonColor, ButtonShape, ButtonSize, ButtonStyle, CardType, FlipAxis, OverlayLoaderStyle, OverlaySidePanelService, SpinnerSize } from 'projects/lib/src/lib';
+import { BadgeColor, BadgePosition, BadgeShape, BadgeSize, BadgeStyle, ButtonColor, ButtonShape, ButtonSize, ButtonStyle, CardType, FlipAxis, OverlayLoaderStyle, SpinnerSize } from 'projects/lib/src/lib';
 import { DialogService } from 'projects/lib/src/lib/components/dialog/dialog.service';
 import { HomeDialogComponent } from './home-dialog/home-dialog.component';
 import { HomeSidePanelComponent } from './home-side-panel/home-side-panel.component';
@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit,  AfterViewInit {
 
 
   constructor(
-    private _overlaySidePanelService: OverlaySidePanelService,
+
     private _dialogService: DialogService
   ) { }
 
@@ -41,12 +41,12 @@ export class HomeComponent implements OnInit,  AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this._overlaySidePanelService.setContent(HomeSidePanelComponent);
+   
     this._dialogService.setContent(HomeDialogComponent)
   }
 
   public show(): void {
-    this._overlaySidePanelService.show();
+   
   }
 
   public showDialog(): void{

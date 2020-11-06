@@ -4,6 +4,7 @@ export class NavigationLink {
       public iconClass?: string
       public active?: boolean
       public submenu?: { name: string, url: string }[]
+      public menuTitle?: boolean
   }
 
   
